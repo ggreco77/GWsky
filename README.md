@@ -8,89 +8,92 @@ are provided during the FoV sequence.
 
 **Running it**
 
-from idle:  execfile('GWsky.py')
-
-from terminal: python GWsky.py
+    from idle:  execfile('GWsky.py')
+    
+    from terminal: python GWsky.py
 
 
 **Input Parameters:**
 
 
-sky_map : str 
+    sky_map : str 
+    LVC probability skymap in healpix format
 
-*LVC probability skymap in healpix format*
+    percentage : float
+    probability percentage to determine the area (in square degrees) confined in it
 
-percentage : float
+    FOV_size : float
+    size of Field-of-View Instrument
 
-*probability percentage to determine the area (in square degrees) confined in it*
+    time_input : str
+    the time in the format "2012-7-12 23:00:00"
 
-FOV_size : float
+    lat_input : float
+    Geodetic coordinates of the Observatory: latitude (deg)
 
-*size of Field-of-View Instrument*
+    lon_input : float
+    Geodetic coordinates of the Observatory: longitude (deg)
 
-time_input : str
+    height_input : float
+    Geodetic coordinates of the Observatory: altitude (m)
 
-*the time in the format "2012-7-12 23:00:00"* 
+    ra : float
+    right ascention of FoV center (deg)
 
-lat_input : float
-
-*Geodetic coordinates of the Observatory: latitude (deg)*
-
-lon_input : float
-
-*Geodetic coordinates of the Observatory: longitude (deg)*
-
-height_input : float
-
-*Geodetic coordinates of the Observatory: altitude (m)*
-
-ra : float
-
-*right ascention of FoV center (deg)*
-
-dec : float
-
-*declination of FoV center (deg)*
+    dec : float
+    declination of FoV center (deg)
 
 
 **Return:**
 
-area_probability : float
+    area_probability : float
+    the area (in square degrees) confined in a given probability percentage
 
-*the area (in square degrees) confined in a given probability percentage*
+    percentage_poly : float
+    the integrated probability in a specific FOV (%)
 
-percentage_poly : float
+    airmass : float
+    the airmass of the FOV center
 
-*the integrated probability in a specific FOV (%)*
+    contour_ipix.out: list
+    the table that contained the pixels confined in a given probability percentage
 
-airmass : float
+    ra_max : float
+    right ascention of the highest probability pixel
 
-*the airmass of the FOV center*
+    dec_max : float
+    declination of the highest probability pixel
 
-contour_ipix.out: list
+    instrument_FOV.vot : VOTABLE
+    Instrument Footprint Editor from http://aladin.u-strasbg.fr/footprint_editor/
 
-*the table that contained the pixels confined in a given probability percentage*
-
-ra_max : float
-
-*right ascention of the highest probability pixel*
-
-dec_max : float
-
-*declination of the highest probability pixel*
-
-instrument_FOV.vot : VOTABLE
-
-*Instrument Footprint Editor from http://aladin.u-strasbg.fr/footprint_editor/*
-
-N/S/E/W/R/Q : str
-
+    N/S/E/W/R/Q : str
     N/S/E/W: a set of command line to add a contiguous FOVs in North/South/East/West  (N/S/E/W) directions;
-  
     R: to insert a new FOV center RA[deg], DEC[deg] to begin a new sequence in N/S/E/W directions;
-  
     Q: quit
-     
+    
+**SUMMARY OF DEPENDENCIES**
 
+    from astropy.vo.samp import SAMPIntegratedClient
+    import urlparse
+    import os.path
+    from configobj import ConfigObj
+    ----> install "sudo apt-get install python-configobj"
+    from astropy.io.votable import parse
+    from math import sin, cos, acos, degrees, radians
+    import healpy
+    import numpy
+    import time                                                                   
+    import sys 
 
+**Script functions**
 
+    import send_Aladin_image as sAi
+    import send_Aladin_script as sAs
+    import print_area_prob as pap
+    import table_ipix_percentage as tip
+    import highest_probability_pixel as hpp
+    import instrument_FOV as iF
+    import airmass as airmass
+    from gw_core import *
+    import progress_bar as pb
