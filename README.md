@@ -5,6 +5,7 @@ The results are displayed in Aladin Sky Atlas using the |SAMPIntegratedClient| c
 (http://aladin.u-strasbg.fr/).
 The airmass at the FoV center and the integrated probability (%)
 are provided during the FoV sequence.
+** The FoV sequence is generated along the coordinate grid. No roll angle is provided.**
 
 **Running it**
 
