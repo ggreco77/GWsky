@@ -38,7 +38,7 @@ SUMMARY OF DEPENDENCIES:
 from astropy.vo.samp import SAMPIntegratedClient
 import urlparse
 import os.path
-from configobj import ConfigObj
+import config
 ----> install "sudo apt-get install python-configobj"
 from astropy.io.votable import parse
 from math import sin, cos, acos, degrees, radians
@@ -127,6 +127,7 @@ import progress_bar as pb
 
 
      # write and read parameters from a config file
+from configobj import ConfigObj
 
 # create an empty config file "config_GWsky"
 config = ConfigObj(infile='config_GWsky', create_empty=True)
