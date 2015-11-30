@@ -431,7 +431,7 @@ def add_FOV(infile,FOV_size,ra,dec):
                print ''
 
                                                                       
-          elif direction == 'O':
+          elif direction == 'W':
 
                # set Dec coordinate for West direction
                add_pointing_O_ra = p0_O[0] - offset 
