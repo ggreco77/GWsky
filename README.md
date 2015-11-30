@@ -1,11 +1,9 @@
 # GWsky
-The interactive script GWsky (v2) defines a sequence of Fields of View (FoV)
-from a fixed position over the sky. North/South/East/West directions are allowed.
-The results are displayed in Aladin Sky Atlas using the |SAMPIntegratedClient| class
-(http://aladin.u-strasbg.fr/).
+The interactive script GWsky (v2) defines a sequence of Fields of View (FoV) centers from a fixed position over the sky. North/South/East/West directions are allowed. The results are displayed in Aladin Sky Atlas using the |SAMPIntegratedClient| class (http://aladin.u-strasbg.fr/).
 The airmass at the FoV center and the integrated probability (%)
 are provided during the FoV sequence.
-** The FoV sequence is generated along the coordinate grid. No roll angle is provided.**
+** The FoV sequence is generated along the coordinate grid; no roll angle is provided**.
+The FoV centers were evenly space assuming that the shortest angular distance between two points on the celestial sphere is measured along a great circle that passes through both of them: cosθ=sinδ1sinδ2+cosδ1cosδ2cos(α1−α2), where (α1,δ1) and (α2,δ2) are the right ascension and declination of the two points on the sky (expressed in degrees, then converted to radians).
 
 **Running it**
 
