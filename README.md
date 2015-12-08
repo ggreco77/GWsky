@@ -28,8 +28,9 @@ The Fig. below shows a FoV sequence that covers a skymap region in which 50% of 
     percentage : float
     probability percentage to determine the area (in square degrees) confined in it
 
-    FOV_size : float
-    size of Field-of-View Instrument
+    FOV_base   : float
+    FOV_height : float
+    size of Field-of-View Instrument in degrees
 
     time_input : str
     the time in the format "2012-7-12 23:00:00"
