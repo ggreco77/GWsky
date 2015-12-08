@@ -38,7 +38,7 @@ def percentage_FOV(infile,ra_vertices,dec_vertices):
      percentage_poly=hpx[ipix_poly].sum()
 
 
-def vertices_FOV(ra,dec,FOV_size):
+def vertices_FOV(ra,dec,FOV_base,FOV_height):
 
      """
 
@@ -60,30 +60,50 @@ def vertices_FOV(ra,dec,FOV_size):
      global vertex_4_ra
      global vertex_4_dec
 
-     # same declination is assumed; from degree to rad
-     delta0_rads = radians(dec)
-
+     # new FOV_base; FOV_height -----> FOV_height =  FOV_height
+     
+     #-------------------------------------------------------------------------
+     # same declination is assumed; from degree to rad (+ FOV_height / 2.0)
+     delta0_rads = radians(dec) + radians(FOV_height / 2.0) 
      delta1_rads = delta0_rads 
 
-
-     # x = cos(alfa0_rads-alfa1_rads)
-     x=(cos(radians(FOV_size/2.0))-sin(delta0_rads)*sin(delta1_rads))/(cos(delta0_rads)*cos(delta1_rads))
+     # x = cos(alfa0_rads-alfa1_rads) in _vertices_FOV function
+     x_vertices_FOV=(cos(radians(FOV_base/2.0))-sin(delta0_rads)*sin(delta1_rads))/(cos(delta0_rads)*cos(delta1_rads))
 
      # offset to obtain a specific distance in degrees on the sky
-     offset = degrees(acos(x))
+     offset_N = degrees(acos(x_vertices_FOV))
+     #--------------------------------------------------------------------------
 
+     
+
+     #-------------------------------------------------------------------------
+     # same declination is assumed; from degree to rad (- FOV_height / 2.0)
+     delta0_rads = radians(dec) - radians(FOV_height / 2.0  ) 
+     delta1_rads = delta0_rads 
+
+     # x = cos(alfa0_rads-alfa1_rads) in _vertices_FOV function
+     x_vertices_FOV=(cos(radians(FOV_base/2.0))-sin(delta0_rads)*sin(delta1_rads))/(cos(delta0_rads)*cos(delta1_rads))
+
+     # offset to obtain a specific distance in degrees on the sky
+     offset_S = degrees(acos(x_vertices_FOV))
+     #--------------------------------------------------------------------------
+
+     
+
+
+                                               
      # FOV vertices 
-     vertex_1_ra, vertex_1_dec = ra + offset, dec + FOV_size / 2.0
+     vertex_1_ra, vertex_1_dec = ra + offset_N, dec + FOV_height / 2.0   
 
-     vertex_2_ra, vertex_2_dec = ra - offset, dec + FOV_size / 2.0
+     vertex_2_ra, vertex_2_dec = ra - offset_N, dec + FOV_height / 2.0
 
-     vertex_3_ra, vertex_3_dec = ra + offset, dec - FOV_size / 2.0
+     vertex_3_ra, vertex_3_dec = ra + offset_S, dec - FOV_height / 2.0   
 
-     vertex_4_ra, vertex_4_dec = ra - offset, dec - FOV_size / 2.0
+     vertex_4_ra, vertex_4_dec = ra - offset_S, dec - FOV_height / 2.0
 
 
 
-def add_FOV(infile,FOV_size,ra,dec):
+def add_FOV(infile,FOV_base,FOV_height,ra,dec):
 
      """
           Define a sequence of instrument FOVs from a predetermined sky position.
@@ -130,10 +150,16 @@ def add_FOV(infile,FOV_size,ra,dec):
      delta1_rads = delta0_rads 
 
      # x=cos(alfa0_rads-alfa1_rads)
-     x=(cos(radians(FOV_size))-sin(delta0_rads)*sin(delta1_rads))/(cos(delta0_rads)*cos(delta1_rads))
+     x=(cos(radians(FOV_height))-sin(delta0_rads)*sin(delta1_rads))/(cos(delta0_rads)*cos(delta1_rads))
+
+     x_est_west=(cos(radians(FOV_base))-sin(delta0_rads)*sin(delta1_rads))/(cos(delta0_rads)*cos(delta1_rads))
 
      # offset to obtain a specific distance in degrees on the sky
      offset = degrees(acos(x))
+
+     offset_est_west = degrees(acos(x_est_west))
+
+     
 
      # initializing variables
      p0_N = [ra, dec]
@@ -146,7 +172,7 @@ def add_FOV(infile,FOV_size,ra,dec):
 
 
      # Find the vertices of FOV 
-     vertices_FOV(ra,dec,FOV_size)
+     vertices_FOV(ra,dec,FOV_base,FOV_height)
 
      # sky coord FOV center
      coord = [ra, dec]
@@ -192,14 +218,23 @@ def add_FOV(infile,FOV_size,ra,dec):
 
      
      # build command script for Aladin: draw string (ra, dec, "percentage_poly")
-     FOV_center = [ra+(FOV_size/4.0), dec+(FOV_size/4.0)]
+     FOV_center = [ra+(FOV_height/4.0), dec+(FOV_height/4.0)]
      FOV_center = ' , '.join(map(str, FOV_center))
      draw_string_percentage_poly = 'draw string' + '( ' + FOV_center +','+str(('% .1e' % percentage_poly))+'%)'
 
      # send script to Aladin
      #send_Aladin_script(draw_string_percentage_poly)
      sAs.send_Aladin_script(draw_string_percentage_poly)
+
+
+     # VizieR Queries (astroquery.vizier)
+     import FOV_query as Fq
+
+     FOV_base_str=str(FOV_base)+'d'
+     FOV_height_str=str(FOV_height)+'d'
      
+     #Fq.FOV_query(ra=ra,dec=dec,width=FOV_base_str,height=FOV_height_str,catalog_id='GWGC')
+
 
 
      print '     ===================================================================== '
@@ -220,14 +255,14 @@ def add_FOV(infile,FOV_size,ra,dec):
           if direction == 'N':
 
                # set Dec coordinate for North direction
-               add_pointing_N_dec = p0_N[1] + FOV_size 
+               add_pointing_N_dec = p0_N[1] + FOV_height 
 
                # variable cycle; not saved
                p0_N[1] = add_pointing_N_dec
 
 
                # Find the vertices of FOV 
-               vertices_FOV(ra, add_pointing_N_dec, FOV_size)
+               vertices_FOV(ra, add_pointing_N_dec, FOV_base, FOV_height)
 
 
                # sky coord FOV center
@@ -279,7 +314,7 @@ def add_FOV(infile,FOV_size,ra,dec):
 
 
                # build command script for Aladin: draw string (ra, dec, "percentage_poly")
-               FOV_center = [ra+(FOV_size/4.0), add_pointing_N_dec+(FOV_size/4.0)]
+               FOV_center = [ra+(FOV_height/4.0), add_pointing_N_dec+(FOV_height/4.0)]
                FOV_center = ' , '.join(map(str, FOV_center))
                draw_string_percentage_poly = 'draw string' + '( ' + FOV_center +','+str(('% .1e' % percentage_poly))+'%)'
 
@@ -295,13 +330,13 @@ def add_FOV(infile,FOV_size,ra,dec):
           elif direction == 'S':
 
                # set Dec coordinate for South direction
-               add_pointing_S_dec = p0_S[1] - FOV_size 
+               add_pointing_S_dec = p0_S[1] - FOV_height 
 
                # variable cycle; not saved
                p0_S[1] = add_pointing_S_dec
 
                # Find the vertices of FOV
-               vertices_FOV(ra, add_pointing_S_dec, FOV_size)
+               vertices_FOV(ra, add_pointing_S_dec, FOV_base, FOV_height)
 
                # sky coord FOV center
                coord = [ra, add_pointing_S_dec]
@@ -347,7 +382,7 @@ def add_FOV(infile,FOV_size,ra,dec):
 
 
                # build command script for Aladin: draw string (ra, dec, "percentage_poly")
-               FOV_center = [ra+(FOV_size/4.0), add_pointing_S_dec+(FOV_size/4.0)]
+               FOV_center = [ra+(FOV_height/4.0), add_pointing_S_dec+(FOV_height/4.0)]
                FOV_center = ' , '.join(map(str, FOV_center))
                draw_string_percentage_poly = 'draw string' + '( ' + FOV_center +','+str(('% .1e' % percentage_poly))+'%)'
 
@@ -364,13 +399,13 @@ def add_FOV(infile,FOV_size,ra,dec):
           elif direction == 'E':
 
                # set Dec coordinate for east direction
-               add_pointing_E_ra = p0_E[0] + offset 
+               add_pointing_E_ra = p0_E[0] + offset_est_west
 
                # variable cycle; not saved
                p0_E[0] = add_pointing_E_ra
 
                # Find the vertices of FOV
-               vertices_FOV(add_pointing_E_ra, dec, FOV_size)
+               vertices_FOV(add_pointing_E_ra, dec, FOV_base, FOV_height)
 
                # sky coord FOV center
                coord = [add_pointing_E_ra, dec]
@@ -416,7 +451,7 @@ def add_FOV(infile,FOV_size,ra,dec):
                print ''
 
                # build command script for Aladin: draw string (ra, dec, "percentage_poly")
-               FOV_center = [add_pointing_E_ra+(FOV_size/4.0), dec+(FOV_size/4.0)]
+               FOV_center = [add_pointing_E_ra+(FOV_height/4.0), dec+(FOV_height/4.0)]
                FOV_center = ' , '.join(map(str, FOV_center))
                draw_string_percentage_poly = 'draw string' + '( ' + FOV_center +','+str(('% .1e' % percentage_poly))+'%)'
 
@@ -431,16 +466,16 @@ def add_FOV(infile,FOV_size,ra,dec):
                print ''
 
                                                                       
-          elif direction == 'W':
+          elif direction == 'O':
 
                # set Dec coordinate for West direction
-               add_pointing_O_ra = p0_O[0] - offset 
+               add_pointing_O_ra = p0_O[0] - offset_est_west
 
                # variable cycle; not saved
                p0_O[0] = add_pointing_O_ra
 
                # Find the vertices of FOV
-               vertices_FOV(add_pointing_O_ra, dec, FOV_size)
+               vertices_FOV(add_pointing_O_ra, dec, FOV_base,FOV_height)
 
                # sky coord FOV center
                coord = [add_pointing_O_ra, dec]
@@ -486,7 +521,7 @@ def add_FOV(infile,FOV_size,ra,dec):
                print ''
 
                # build command script for Aladin: draw string (ra, dec, "percentage_poly")
-               FOV_center = [add_pointing_O_ra+(FOV_size/4.0), dec+(FOV_size/4.0)]
+               FOV_center = [add_pointing_O_ra+(FOV_height/4.0), dec+(FOV_height/4.0)]
                FOV_center = ' , '.join(map(str, FOV_center))
                draw_string_percentage_poly = 'draw string' + '( ' + FOV_center +','+str(('% .1e' % percentage_poly))+'%)'
 
@@ -512,7 +547,7 @@ def add_FOV(infile,FOV_size,ra,dec):
                config.write()
 
                
-               add_FOV(infile, FOV_size,ra,dec)
+               add_FOV(infile, FOV_height,ra,dec)
 
           # closes all cycles one after another
           elif direction == 'Q':
