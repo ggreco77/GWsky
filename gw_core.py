@@ -543,7 +543,7 @@ def add_FOV(infile,FOV_base,FOV_height,ra,dec):
                config.write()
 
                
-               add_FOV(infile, FOV_height,ra,dec)
+               add_FOV(infile,FOV_base,FOV_height,ra,dec)
 
           # closes all cycles one after another
           elif direction == 'Q':
