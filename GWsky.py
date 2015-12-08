@@ -211,7 +211,7 @@ try:
      FOV_base = config['FOV_base']
      config.write()
      
-#new write and read in config file "config_GWsky" the parameter "FOV_height"
+# write and read in config file "config_GWsky" the parameter "FOV_height"
      config['FOV_height'] = FOV_height
      FOV_height = config['FOV_height']
      config.write()
@@ -228,7 +228,7 @@ except:
 pb.progress_bar()
 
 # Modify the file output of Instrument Footprint Editor
-iF.instrument_FOV(FOV_size)
+iF.instrument_FOV(FOV_base, FOV_height)
 
 #progress_bar()
 
