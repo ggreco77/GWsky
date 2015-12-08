@@ -203,19 +203,24 @@ pb.progress_bar()
 
 
 try:
-     
-     FOV_size=input(' Insert the size of your FOV instrument [deg]: ')
+     #rectangle FOV
+     FOV_ba se, FOV_height = input(' Insert the size of your FOV instrument [deg]: ')
 
-# write and read in config file "config_GWsky" the parameter "FOV_size"
-     config['FOV_size'] = FOV_size
-     FOV_size = config['FOV_size']
+# write and read in config file "config_GWsky" the parameter "FOV_base"
+     config['FOV_base'] = FOV_base
+     FOV_base = config['FOV_base']
+     config.write()
+     
+#new write and read in config file "config_GWsky" the parameter "FOV_height"
+     config['FOV_height'] = FOV_height
+     FOV_height = config['FOV_height']
      config.write()
 
 except:
      print ''
      print '    -------------------------------------------------------------'
      print '    ***Please insert the size of your Field Of View in degrees*** '
-     print '                   ex. for a 3° x 3° FOV: 3    '
+     print '                   ex. for a 3° x 2° FOV: 3,2    '
      print '    -------------------------------------------------------------'
      print ''
      raise
@@ -300,7 +305,7 @@ dec =  config['dec']
 config.write()
 
 
-add_FOV(infile,FOV_size,ra,dec)
+add_FOV(infile,FOV_base,FOV_height,ra,dec)
 
 pb.progress_bar
 
