@@ -36,15 +36,18 @@ def instrument_FOV(FOV_size):
     data = table.array
 
     # Convert FOV size degree to arcsecond
-
-    FOV_size_arcsec = FOV_size*3600
+    FOV_base_arcsec = FOV_base*3600.0
+    FOV_height_arcsec = FOV_height*3600.0
 
     
-    # user FOV size
-    data[0] = - FOV_size_arcsec /  2.0,   FOV_size_arcsec / 2.0
-    data[1] =   FOV_size_arcsec /  2.0,   FOV_size_arcsec / 2.0
-    data[2] =   FOV_size_arcsec /  2.0, - FOV_size_arcsec / 2.0
-    data[3] = - FOV_size_arcsec /  2.0, - FOV_size_arcsec / 2.0
+    # user FOV size: FOV_base and FOV_height
+    data[0] = - FOV_base_arcsec /  2.0,   FOV_height_arcsec / 2.0
+    
+    data[1] =   FOV_base_arcsec /  2.0,   FOV_height_arcsec / 2.0
+    
+    data[2] =   FOV_base_arcsec /  2.0, - FOV_height_arcsec / 2.0
+    
+    data[3] = - FOV_base_arcsec /  2.0, - FOV_height_arcsec / 2.0
 
     # outputting a VOTable file
     votable.to_xml('instrument_FOV.vot')
