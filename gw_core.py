@@ -88,10 +88,6 @@ def vertices_FOV(ra,dec,FOV_base,FOV_height):
      offset_S = degrees(acos(x_vertices_FOV))
      #--------------------------------------------------------------------------
 
-     
-
-
-                                               
      # FOV vertices 
      vertex_1_ra, vertex_1_dec = ra + offset_N, dec + FOV_height / 2.0   
 
@@ -228,10 +224,10 @@ def add_FOV(infile,FOV_base,FOV_height,ra,dec):
 
 
      # VizieR Queries (astroquery.vizier)
-     import FOV_query as Fq
+     #import FOV_query as Fq
 
-     FOV_base_str=str(FOV_base)+'d'
-     FOV_height_str=str(FOV_height)+'d'
+     #FOV_base_str=str(FOV_base)+'d'
+     #FOV_height_str=str(FOV_height)+'d'
      
      #Fq.FOV_query(ra=ra,dec=dec,width=FOV_base_str,height=FOV_height_str,catalog_id='GWGC')
 
