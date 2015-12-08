@@ -1,4 +1,4 @@
-def instrument_FOV(FOV_size):
+def instrument_FOV(FOV_base, FOV_height):
     
     """
 
