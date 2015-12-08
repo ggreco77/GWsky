@@ -197,7 +197,7 @@ def add_FOV(infile,FOV_base,FOV_height,ra,dec):
 
      # airmass calculation at a given time in a particular site
      airmass(ra, dec, lat_input, lon_input, height_input, time_input, airmass_min=1, airmass_max=5.8)
-     #print 'dimmi qualcosa', airmass_value
+     
      
      
      print ''
