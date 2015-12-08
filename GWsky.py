@@ -204,7 +204,7 @@ pb.progress_bar()
 
 try:
      #rectangle FOV
-     FOV_ba se, FOV_height = input(' Insert the size of your FOV instrument [deg]: ')
+     FOV_base, FOV_height = input(' Insert the size of your FOV instrument [deg]: ')
 
 # write and read in config file "config_GWsky" the parameter "FOV_base"
      config['FOV_base'] = FOV_base
