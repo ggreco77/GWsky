@@ -12,14 +12,6 @@ def instrument_FOV(FOV_base, FOV_height):
 
     from send_Aladin_image import send_Aladin_image
     
-    import warnings
-    
-    # ignore all warnings from Astropy
-    from astropy.utils.exceptions import AstropyWarning
-
-    warnings.simplefilter('ignore', category=AstropyWarning)
-
-    
     from astropy.io.votable import parse
     
     # download an Aladin Instrument Footprint file from GitHub
