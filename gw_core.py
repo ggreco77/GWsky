@@ -274,7 +274,7 @@ def add_FOV(infile,FOV_base,FOV_height,ra,dec):
           
                # save the center and the corners of selected FOV in "pointing.out" and send the sky positions to Aladin
                np.savetxt('pointing',[coord,vtx_1,vtx_2,vtx_3,vtx_4],fmt='%1.5f,%1.5f',header='RA[deg],DEC[deg]',comments=' ')
-               sAi.send_Aladin_image('pointing')
+               #sAi.send_Aladin_image('pointing')
                
                print '---> The new FOV is centered at RA = ', str(('% .5f' % ra))+'°', 'and DEC =', str(('%.5f' % add_pointing_N_dec))+'°. <---'
                print ' '
