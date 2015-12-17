@@ -1,4 +1,5 @@
-# GWsky
+# GWsky 
+                             video tutorial https://vimeo.com/149301895
 The interactive script GWsky (v2) defines a sequence of Fields of View (FoV) centers from a fixed position over the sky. North/South/East/West directions are allowed. The results are displayed in Aladin Sky Atlas (http://aladin.u-strasbg.fr/) using the |SAMPIntegratedClient| class. The airmass at the FoV center and the integrated probability (%)
 are provided during the FoV sequence.
     
