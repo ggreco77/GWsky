@@ -248,7 +248,7 @@ def add_FOV(infile,FOV_base,FOV_height,ra,dec):
           print ' '
           print ' '
            
-          if direction.capitalize() == 'N':
+          if direction.strip().capitalize() == 'N':
 
                # set Dec coordinate for North direction
                add_pointing_N_dec = p0_N[1] + FOV_height 
@@ -323,7 +323,7 @@ def add_FOV(infile,FOV_base,FOV_height,ra,dec):
                print '     ===================================================================== '
                
                
-          elif direction.capitalize() == 'S':
+          elif direction.strip().capitalize() == 'S':
 
                # set Dec coordinate for South direction
                add_pointing_S_dec = p0_S[1] - FOV_height 
@@ -392,7 +392,7 @@ def add_FOV(infile,FOV_base,FOV_height,ra,dec):
                print ''
 
           
-          elif direction.capitalize() == 'E':
+          elif direction.strip().capitalize() == 'E':
 
                # set Dec coordinate for east direction
                add_pointing_E_ra = p0_E[0] + offset_est_west
@@ -462,7 +462,7 @@ def add_FOV(infile,FOV_base,FOV_height,ra,dec):
                print ''
 
                                                                       
-          elif direction.capitalize() == 'W':
+          elif direction.strip().capitalize() == 'W':
 
                # set Dec coordinate for West direction
                add_pointing_O_ra = p0_O[0] - offset_est_west
@@ -531,7 +531,7 @@ def add_FOV(infile,FOV_base,FOV_height,ra,dec):
                print ''
  
            # run a new cycle
-          elif direction.capitalize() == 'R':
+          elif direction.strip().capitalize() == 'R':
 
                ra_new, dec_new = input(' Insert a new FOV center RA[deg], DEC[deg]: ')
 
@@ -546,7 +546,7 @@ def add_FOV(infile,FOV_base,FOV_height,ra,dec):
                add_FOV(infile,FOV_base,FOV_height,ra,dec)
 
           # closes all cycles one after another
-          elif direction.capitalize() == 'Q':
+          elif direction.strip().capitalize() == 'Q':
                break
                
           else:
