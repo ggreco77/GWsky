@@ -117,7 +117,7 @@ def add_FOV(infile,FOV_base,FOV_height,ra,dec):
      from math import sin, cos, acos, degrees, radians
      
      
-     # read value from config file "config_GWsky"
+     # read values from config file "config_GWsky"
      from configobj import ConfigObj
      config = ConfigObj('config_GWsky')
 
