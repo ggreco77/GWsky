@@ -3,18 +3,18 @@ def progress_bar():
      import time                                                                         
      import sys                                                                          
                                                                                  
-     toolbar_width = 35                                                                
+     toolbar_width = 15                                                               
                                                                                  
-     # setup toolbar                                                                   
-     sys.stdout.write("[%s]" % (" " * toolbar_width))   
+                                                                    
      sys.stdout.flush()                                
      sys.stdout.write("\b" * (toolbar_width+1))        
                                                   
      for i in xrange(toolbar_width):                   
-         time.sleep(0.1)                               
+         time.sleep(0.005)                               
 
-         # update the bar                              
-         sys.stdout.write("*")                         
+                                      
+         sys.stdout.write("\b")                         
          sys.stdout.flush()                            
                                                        
-     sys.stdout.write("\n")    
+     sys.stdout.write(" ")
+     print ''
