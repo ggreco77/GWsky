@@ -85,8 +85,6 @@ The Fig. below shows a FoV sequence that covers a skymap region in which 50% of 
     from astropy.vo.samp import SAMPIntegratedClient
     import urlparse
     import os.path
-    from configobj import ConfigObj
-    ----> install "sudo apt-get install python-configobj"
     from astropy.io.votable import parse
     from math import sin, cos, acos, degrees, radians
     import healpy
@@ -96,12 +94,11 @@ The Fig. below shows a FoV sequence that covers a skymap region in which 50% of 
 
 **Script functions**
 
-    import send_Aladin_image as sAi
-    import send_Aladin_script as sAs
-    import print_area_prob as pap
-    import table_ipix_percentage as tip
-    import highest_probability_pixel as hpp
-    import instrument_FOV as iF
-    import airmass as airmass
-    from gw_core import *
-    import progress_bar as pb
+    import aladinSAMP
+    import print_area_prob 
+    import table_ipix_percentage 
+    import highest_probability_pixel 
+    import instrument_FOV 
+    import airmass 
+    import gw_sequence
+    import progress_bar
