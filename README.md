@@ -15,9 +15,12 @@ The Fig. below shows a FoV sequence that covers a skymap region in which 50% of 
 
 **Running it**
 
-    from idle:  execfile('GWsky.py')
+    from idle:  
+              >>> import GWsky 
+              >>> GWsky.main() 
     
-    from terminal: python GWsky.py
+    from terminal: ./GWsky
+    if ./GWsky: Permission denied; type: chmod u+x GWsky
 
 
 **Input Parameters:**
