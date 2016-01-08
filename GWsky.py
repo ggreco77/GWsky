@@ -113,7 +113,7 @@ def main():
      while True:
           try:
                print(' Calculate the area confined in a given probability percentage; ')
-               percentage = input(' (0 < p > 1) : ')
+               percentage = input(' (0 > p > 1) : ')
                while True:
                     if percentage > 1 or percentage < 0:
                          print ''
