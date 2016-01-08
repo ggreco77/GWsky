@@ -61,7 +61,7 @@ The Fig. below shows a FoV sequence that covers a skymap region in which 50% of 
     sky position in degrees; RA[deg], DEC[deg]
     
     ID : str
-    object ID to display in the Aladin plan.
+    object ID to display in the Aladin plan
 
 
 **Return:**
@@ -87,7 +87,6 @@ The Fig. below shows a FoV sequence that covers a skymap region in which 50% of 
     instrument_FOV.vot : VOTABLE
     Instrument Footprint Editor from http://aladin.u-strasbg.fr/footprint_editor/
     
-    The items are listed in each FoV. 
 
     N/S/E/W/R/Q : str
     N/S/E/W: a set of command line to add contiguous FOVs in North/South/East/West  (N/S/E/W) directions;
@@ -95,7 +94,9 @@ The Fig. below shows a FoV sequence that covers a skymap region in which 50% of 
     Q: quit
     
 **SUMMARY OF DEPENDENCIES**
-
+    from astroquery.vizier import Vizier
+    import astropy.coordinates 
+    import astropy.units 
     from astropy.vo.samp import SAMPIntegratedClient
     import urlparse
     import os.path
