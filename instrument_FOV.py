@@ -10,7 +10,7 @@ def instrument_FOV(FOV_base, FOV_height):
     """
 
 
-    from send_Aladin_image import send_Aladin_image
+    import aladinSAMP
     
     from astropy.io.votable import parse
     
