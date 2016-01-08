@@ -94,6 +94,7 @@ The Fig. below shows a FoV sequence that covers a skymap region in which 50% of 
     Q: quit
     
 **SUMMARY OF DEPENDENCIES**
+
     from astroquery.vizier import Vizier
     import astropy.coordinates 
     import astropy.units 
