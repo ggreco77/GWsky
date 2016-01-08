@@ -34,8 +34,11 @@ The Fig. below shows a FoV sequence that covers a skymap region in which 50% of 
 
     FOV_base   : float
     FOV_height : float
-    size of Field-of-View Instrument in degrees
-
+    size of Field of View in degrees
+    
+    catalog : str
+    ID of a catalog for VizieR Query
+    
     time_input : str
     the time in the format "2012-7-12 23:00:00"
 
@@ -53,6 +56,12 @@ The Fig. below shows a FoV sequence that covers a skymap region in which 50% of 
 
     dec : float
     declination of FoV center (deg)
+    
+    position_candidate : float
+    sky position in degrees; RA[deg], DEC[deg]
+    
+    ID : str
+    object ID to display in the Aladin plan.
 
 
 **Return:**
@@ -71,16 +80,18 @@ The Fig. below shows a FoV sequence that covers a skymap region in which 50% of 
 
     ra_max : float
     right ascention of the highest probability pixel
-
+    
     dec_max : float
     declination of the highest probability pixel
 
     instrument_FOV.vot : VOTABLE
     Instrument Footprint Editor from http://aladin.u-strasbg.fr/footprint_editor/
+    
+    The items are listed in each FoV. 
 
     N/S/E/W/R/Q : str
     N/S/E/W: a set of command line to add contiguous FOVs in North/South/East/West  (N/S/E/W) directions;
-    R: to insert a new FOV center RA[deg], DEC[deg] to begin a new sequence in N/S/E/W directions;
+    R: to insert a new FOV center RA[deg], DEC[deg] for a new sequence in N/S/E/W directions;
     Q: quit
     
 **SUMMARY OF DEPENDENCIES**
