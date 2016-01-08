@@ -20,13 +20,13 @@
 
     <section class="main-content">
       <h1>
-<a id="gwsky--tailing-the-skymap-in-fields-of-view" class="anchor" href="#gwsky--tailing-the-skymap-in-fields-of-view" aria-hidden="true"><span class="octicon octicon-link"></span></a>GWsky:  tailing the skymap in fields of view.</h1>
+<a id="gwsky-tailing-the-skymap-in-fields-of-view" class="anchor" href="#gwsky-tailing-the-skymap-in-fields-of-view" aria-hidden="true"><span class="octicon octicon-link"></span></a>GWsky: tailing the skymap in Fields of View</h1>
 
 <pre><code>                         video tutorial: https://vimeo.com/149301895
 </code></pre>
 
-<p>The interactive script GWsky (v2) defines a sequence of Fields of View (FoV) centers from a fixed position over the sky. North/South/East/West directions are allowed. The results are displayed in Aladin Sky Atlas (<a href="http://aladin.u-strasbg.fr/">http://aladin.u-strasbg.fr/</a>) using the |SAMPIntegratedClient| class. The airmass at the FoV center and the integrated probability (%)
-are provided during the FoV sequence.</p>
+<p>The interactive script GWsky (v2) defines a sequence of Fields of View (FoV) centers from a fixed position over the sky. North/South/East/West directions are allowed. The results are displayed in Aladin Sky Atlas (<a href="http://aladin.u-strasbg.fr/">http://aladin.u-strasbg.fr/</a>) using the |SAMPIntegratedClient| class. The airmass at the FoV center and the integrated probability (%) are provided during the FoV sequence. Moreover, specifying the ID of a catalog, a query request to the Vizier database is sent. The items are listed in each FoV. 
+Interactively, users can enter any specific objects to display in the Aladin plans for further analysis.</p>
 
 <pre><code>The FoV sequence is generated along the coordinate grid; no roll angle is provided in this  release.
 </code></pre>
@@ -62,7 +62,10 @@ probability percentage to determine the area (in square degrees) confined in it
 
 FOV_base   : float
 FOV_height : float
-size of Field-of-View Instrument in degrees
+size of Field of View in degrees
+
+catalog : str
+ID of a catalog for VizieR Query
 
 time_input : str
 the time in the format "2012-7-12 23:00:00"
@@ -81,6 +84,13 @@ right ascention of FoV center (deg)
 
 dec : float
 declination of FoV center (deg)
+
+position_candidate : float
+sky position in degrees; RA[deg], DEC[deg];
+a specific object to display in the Aladin plan
+
+ID : str
+object ID to display in the Aladin plan
 </code></pre>
 
 <p><strong>Return:</strong></p>
@@ -106,15 +116,24 @@ declination of the highest probability pixel
 instrument_FOV.vot : VOTABLE
 Instrument Footprint Editor from http://aladin.u-strasbg.fr/footprint_editor/
 
+result : &lt;class 'astroquery.utils.commons.TableList'&gt;
+result of the query
+
 N/S/E/W/R/Q : str
 N/S/E/W: a set of command line to add contiguous FOVs in North/South/East/West  (N/S/E/W) directions;
-R: to insert a new FOV center RA[deg], DEC[deg] to begin a new sequence in N/S/E/W directions;
+R: to insert a new FOV center RA[deg], DEC[deg] for a new sequence in N/S/E/W directions;
 Q: quit
+
+option : str
+Y or any key: a set of command line to add interactively any specific objects
 </code></pre>
 
 <p><strong>SUMMARY OF DEPENDENCIES</strong></p>
 
-<pre><code>from astropy.vo.samp import SAMPIntegratedClient
+<pre><code>from astroquery.vizier import Vizier
+import astropy.coordinates 
+import astropy.units 
+from astropy.vo.samp import SAMPIntegratedClient
 import urlparse
 import os.path
 from astropy.io.votable import parse
