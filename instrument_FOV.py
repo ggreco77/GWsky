@@ -45,7 +45,7 @@ def instrument_FOV(FOV_base, FOV_height):
     votable.to_xml('instrument_FOV.vot')
     
     # send to aladin the instrument_FOV.vot
-    aladinSAMP.send_image('instrument_FOV.vot')
+    aladinSAMP.send_file('instrument_FOV.vot')
 
     
 
