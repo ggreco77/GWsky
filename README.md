@@ -58,7 +58,8 @@ The Fig. below shows a FoV sequence that covers a skymap region in which 50% of 
     declination of FoV center (deg)
     
     position_candidate : float
-    sky position in degrees; RA[deg], DEC[deg]
+    sky position in degrees; RA[deg], DEC[deg];
+    a specific object to display in the Aladin plan
     
     ID : str
     object ID to display in the Aladin plan
