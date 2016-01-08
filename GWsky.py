@@ -185,7 +185,7 @@ def main():
      #catalogue VizieR Queries
      print 'Specify the ID of a catalog for VizieR Query; '
      print ' e.g. in the case of Gravitational Wave Galaxy Catalog type: VII/267/gwgc '
-     catalog = raw_input (' : ')
+     catalog = raw_input (' : ').strip()
      
      progress_bar()
 
