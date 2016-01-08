@@ -1,7 +1,7 @@
 # GWsky: tailing the skymap in Fields of View
                              video tutorial: https://vimeo.com/149301895
 The interactive script GWsky (v2) defines a sequence of Fields of View (FoV) centers from a fixed position over the sky. North/South/East/West directions are allowed. The results are displayed in Aladin Sky Atlas (http://aladin.u-strasbg.fr/) using the |SAMPIntegratedClient| class. The airmass at the FoV center and the integrated probability (%) are provided during the FoV sequence. Moreover, specifying the ID of a catalog, a query request to the Vizier database is sent. The items are listed in each FoV. 
-Interactively, users can enter specific objects to display in the Aladin plans for further analysis.
+Interactively, users can enter any specific objects to display in the Aladin plans for further analysis.
     
     The FoV sequence is generated along the coordinate grid; no roll angle is provided in this  release.
 The FoV centers were evenly space assuming that the shortest angular distance between two points on the celestial sphere is measured along a great circle that passes through both of them:
@@ -95,6 +95,9 @@ The Fig. below shows a FoV sequence that covers a skymap region in which 50% of 
     N/S/E/W: a set of command line to add contiguous FOVs in North/South/East/West  (N/S/E/W) directions;
     R: to insert a new FOV center RA[deg], DEC[deg] for a new sequence in N/S/E/W directions;
     Q: quit
+    
+    option : str
+    Y or any key: a set of command line to add interactively any specific objects
     
 **SUMMARY OF DEPENDENCIES**
 
