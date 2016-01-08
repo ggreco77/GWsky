@@ -87,6 +87,8 @@ The Fig. below shows a FoV sequence that covers a skymap region in which 50% of 
     instrument_FOV.vot : VOTABLE
     Instrument Footprint Editor from http://aladin.u-strasbg.fr/footprint_editor/
     
+    result : <class 'astroquery.utils.commons.TableList'>
+    result of the query
 
     N/S/E/W/R/Q : str
     N/S/E/W: a set of command line to add contiguous FOVs in North/South/East/West  (N/S/E/W) directions;
