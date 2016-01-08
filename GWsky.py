@@ -246,7 +246,7 @@ def main():
                while True:
                     try:
                          print ' Insert an ID '
-                         ID = raw_input ( ' : ' )
+                         ID = raw_input ( ' : ' ).strip()
           
                          print ' and the sky position in degrees; RA[deg], DEC[deg] '
                          ra_candidate, dec_candidate = input( ' : ' )
