@@ -1,15 +1,16 @@
 # GWsky: tiling the skymap in Fields of View
                              video tutorial: https://vimeo.com/149301895
-The interactive script GWsky (v2) defines a sequence of Fields of View (FoV) centers from a fixed position over the sky. North/South/East/West directions are allowed. The results are displayed in Aladin Sky Atlas (http://aladin.u-strasbg.fr/) using the |SAMPIntegratedClient| class. The airmass at the FoV center and the integrated probability (%) are provided during the FoV sequence. Moreover, specifying the ID of a catalog, a query request to the Vizier database is sent. The items are listed in each FoV. 
+The interactive script GWsky (v2) aims at optimize the coverage of the large GW error boxes given a specific instrumental Field of View (FoV) and a specific telescope site.                             
+The script GWsky defines a sequence of Fields of View (FoV) centers from a fixed position (for example the position corresponding maximum skymap probability) over the sky. North/South/East/West directions are allowed. The results are displayed in Aladin Sky Atlas (http://aladin.u-strasbg.fr/) using the |SAMPIntegratedClient| class. The airmass at the FoV center and the integrated probability (%) are provided in real time. Moreover, specifying the ID of a catalog, a query request to the Vizier database is sent. The items are listed in each FoV. 
 Interactively, users can enter any specific objects to display in the Aladin plans for further analysis.
     
     The FoV sequence is generated along the coordinate grid; no roll angle is provided in this  release.
 The FoV centers were evenly space assuming that the shortest angular distance between two points on the celestial sphere is measured along a great circle that passes through both of them:
 
                             cosθ=sinδ1sinδ2+cosδ1cosδ2cos(α1−α2), 
-where (α1,δ1) and (α2,δ2) are the right ascension and declination of the two points on the sky (expressed in degrees, then converted to radians).
+where (α1,δ1) and (α2,δ2) are the right ascension and declination of the two points on the sky (expressed radians).
 
-The Fig. below shows a FoV sequence that covers a skymap region in which 50% of probability is contains (red dots).
+The Figure shows a FoV sequence that covers a skymap region in which 50% of probability is contains (red dots).
 
 ![gwsky_fov](https://cloud.githubusercontent.com/assets/11920251/11462523/da085a7a-9715-11e5-959a-5a89076b1e1e.jpg)
 
