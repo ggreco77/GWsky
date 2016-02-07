@@ -1,8 +1,8 @@
-def send_file(infile):
+def send_file( infile ):
      
      """
 
-         Sending a file to Aladin Sky Atlas using the SAMPIntegratedClient class.
+     Sending a file (image or table) to Aladin Sky Atlas using the SAMPIntegratedClient class.
              http://docs.astropy.org/en/stable/vo/samp/example_table_image.html
 
      """
@@ -15,19 +15,19 @@ def send_file(infile):
      params = {}
      import urlparse
      import os.path
-     params["url"] = urlparse.urljoin('file:',
-				 os.path.abspath(infile))
+     params[ "url" ] = urlparse.urljoin( 'file:',
+				 os.path.abspath( infile ) )
 
      message = {}
-     message["samp.mtype"] = "image.load.fits"
-     message["samp.params"] = params
+     message[ "samp.mtype" ] = "image.load.fits"
+     message[ "samp.params" ] = params
      
-     client.notify_all(message)
+     client.notify_all( message )
 
      client.disconnect()
 
 
-def send_script(file_script):
+def send_script( script ):
 
      """
 
@@ -43,12 +43,9 @@ def send_script(file_script):
 
      params = {}
      message = {} 
-     message["samp.mtype"] = "script.aladin.send"
-     message["samp.params"] = {"script":file_script}  
+     message[ "samp.mtype" ] = "script.aladin.send"
+     message[ "samp.params" ] = { "script" : script }  
 
-     client.notify_all(message)
+     client.notify_all( message )
 
      client.disconnect()
-
-
-
