@@ -18,3 +18,22 @@ def progress_bar():
                                                        
      sys.stdout.write(" ")
      print ''
+
+def print_separation_line():
+     print ''
+     print '     ===================================================================== '
+     print ''
+
+
+def print_aladin_plane():
+     print '***********************----------------------***********************'
+     print '   [The FOV is displayed in Aladin plane as **pointing**]           '
+     print '***********************----------------------***********************'
+
+
+def print_aladin_plane_x():
+     print '***********************----------------------***********************'
+     print '   [The FOV is displayed in Aladin plane as **pointing~x**]         '
+     print '***********************----------------------***********************'
+
+
