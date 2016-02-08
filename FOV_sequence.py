@@ -738,16 +738,6 @@ def vertices_FOV( ra_center, dec_center, FOV_base, FOV_height ):
                 
      """
 
-     # FOV vertices global variables
-     global vertex_1_ra
-     global vertex_1_dec
-     global vertex_2_ra
-     global vertex_2_dec
-     global vertex_3_ra
-     global vertex_3_dec
-     global vertex_4_ra
-     global vertex_4_dec
-
      from math import sin, cos, acos, degrees, radians
      from spherical_distance import ra0ra1_distance
 
