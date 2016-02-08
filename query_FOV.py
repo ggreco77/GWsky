@@ -35,26 +35,26 @@ def selected_catalog( ra, dec, FOV_base, FOV_height, catalog ):
 #                           work in progress
 #---------------------------------------------------------------------------------
 
-     if result != [] and catalog == 'VII/267/gwgc':
+     #if result != [] and catalog == 'VII/267/gwgc':
           
 
-          import pandas
-          import numpy as np
-          import matplotlib.pyplot as plt
+          #import pandas
+          #import numpy as np
+          #import matplotlib.pyplot as plt
 
           # converting to pandas
-          for table_name in result.keys():
-               table = result[ table_name ]
+          #for table_name in result.keys():
+          #     table = result[ table_name ]
 
-          table_pandas = table.to_pandas()
+          #table_pandas = table.to_pandas()
 
           # sky coordinates
-          ra_query_FOV = table_pandas.RAJ2000
+          #ra_query_FOV = table_pandas.RAJ2000
      
-          dec_query_FOV = table_pandas.DEJ2000
+          #dec_query_FOV = table_pandas.DEJ2000
 
           # hists of Dist, BMAG and Bmag
-          try:
+          #try:
                #plt.hist(table_pandas.Dist.dropna())
                #plt.title('Histogram of Distance (Mpc)')
                #plt.xlabel('Dist')
@@ -70,19 +70,19 @@ def selected_catalog( ra, dec, FOV_base, FOV_height, catalog ):
      
                #plt.show()
 
-               plt.hist(table_pandas.Bmag.dropna())
-               plt.title('Histogram of the apparent blue magnitude')
-               plt.xlabel('Bmag')
-               plt.ylabel('Count')
+               #plt.hist(table_pandas.Bmag.dropna())
+               #plt.title('Histogram of the apparent blue magnitude')
+               #plt.xlabel('Bmag')
+               #plt.ylabel('Count')
 
-               plt.show()
+               #plt.show()
 
-          except KeyError as key_error:
-               print '',  key_error
-          finally:
-               pass
+          #except KeyError as key_error:
+          #     print '',  key_error
+          #finally:
+          #     pass
      
           # sending to Aladin plane
-          np.savetxt('FOV_query.out',np.c_[ra_query_FOV,dec_query_FOV],delimiter=" ",fmt='%1.5f,%1.5f',header='RA[deg],DEC[deg]',comments=' ')
+          #np.savetxt('FOV_query.out',np.c_[ra_query_FOV,dec_query_FOV],delimiter=" ",fmt='%1.5f,%1.5f',header='RA[deg],DEC[deg]',comments=' ')
 
-          aladinSAMP.send_file( 'FOV_query.out' )
+          #aladinSAMP.send_file( 'FOV_query.out' )
