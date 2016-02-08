@@ -883,7 +883,10 @@ def add_FOV( skymap, FOV_base, FOV_height, ra, dec ):
           print ' '
           print ' Press (N/NW/W/SW/S/SE/E/NE) to add FOVs in '
           print ' North/NorthWest/West/SouthWest/South/SouthEst/Est/NorthEst; '
-          print ' Press R to add a new FOV center; '
+          print ' Press R to run a cycle from a new FOV center; '
+          print ' Press F to start from an existing FoV'
+          print ' Press L to start from the last FOV'
+          print ' Press U to repeat the last change'
           print ' Press Q to exit. '      
           direction = raw_input( ' : ' )
 
@@ -894,6 +897,9 @@ def add_FOV( skymap, FOV_base, FOV_height, ra, dec ):
                     print ' Press (N/NW/W/SW/S/SE/E/NE) to add FOVs in '
                     print ' North/NorthWest/West/SouthWest/South/SouthEast/East/NorthEast; '
                     print ' Press R to add a new FOV center; '
+                    print ' Press F to start from an existing FoV'
+                    print ' Press L to start from the last FOV'
+                    print ' Press U to repeat the last change'
                     print ' Press Q to exit. '      
                     direction = raw_input( ' : ' )
                else:
