@@ -11,9 +11,6 @@ The FoV centers were evenly space assuming that the shortest angular distance be
                             cosθ=sinδ1sinδ2+cosδ1cosδ2cos(α1−α2), 
 where (α1,δ1) and (α2,δ2) are the right ascension and declination of the two points on the sky.
 
-The Figure shows a FoV sequence that covers a skymap region in which 50% of probability is contains (red dots).
-
-![gwsky_fov](https://cloud.githubusercontent.com/assets/11920251/11462523/da085a7a-9715-11e5-959a-5a89076b1e1e.jpg)
 
 **Running it**
 
