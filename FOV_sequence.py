@@ -15,7 +15,7 @@ def towards_north( input_skymap, fov_width, fov_height, catalog,
 
      ra_n, dec_n = float( config_GWsky[ init_ra ] ), float( config_GWsky[ init_dec ] )
 
-     # Undo "U"
+     # Repeat "R"
      config_GWsky [ 'ra_last2' ] = ra_n
      config_GWsky [ 'dec_last2' ] =  dec_n
      
@@ -84,7 +84,7 @@ def towards_south( input_skymap, fov_width, fov_height, catalog,
 
      ra_s, dec_s = float( config_GWsky[ init_ra ] ), float( config_GWsky[ init_dec ] )
 
-     # Undo "U"
+     # Repeat "R"
      config_GWsky [ 'ra_last2' ] = ra_s
      config_GWsky [ 'dec_last2' ] =  dec_s
      
@@ -157,7 +157,7 @@ def towards_east( input_skymap, fov_width, fov_height, catalog,
      ra_e, dec_e = float( config_GWsky[ init_ra ] ), float( config_GWsky[ init_dec ] )
 
 
-     # Undo "U"
+     # Repeat "R"
      config_GWsky [ 'ra_last2' ] = ra_e
      config_GWsky [ 'dec_last2' ] = dec_e
 
@@ -233,7 +233,7 @@ def towards_west( input_skymap, fov_width, fov_height, catalog,
      ra_w, dec_w = float( config_GWsky[ init_ra ] ), float( config_GWsky[ init_dec ] )
      
 
-     # Undo "U"
+     # Repeat "R"
      config_GWsky [ 'ra_last2' ] = ra_w
      config_GWsky [ 'dec_last2' ] = dec_w
 
@@ -310,7 +310,7 @@ def towards_north_east( input_skymap, fov_width, fov_height, catalog,
      
      ra_ne, dec_ne = float( config_GWsky [ 'ra_ne' ] ), float( config_GWsky [ 'dec_ne' ] )   # reading variables            
 
-     # Undo "U"
+     # Repeat "R"
      config_GWsky [ 'ra_last2' ] = ra_ne
      config_GWsky [ 'dec_last2' ] = dec_ne
 
@@ -397,7 +397,7 @@ def towards_north_west( input_skymap, fov_width, fov_height, catalog,
      ra_nw, dec_nw = float( config_GWsky [ 'ra_nw' ] ), float( config_GWsky [ 'dec_nw' ] )   # reading variables           
 
 
-     # Undo "U"
+     # Repeat "R"
      config_GWsky [ 'ra_last2' ] = ra_nw
      config_GWsky [ 'dec_last2' ] = dec_nw
 
@@ -484,7 +484,7 @@ def towards_south_east( input_skymap, fov_width, fov_height, catalog,
      ra_se, dec_se = float( config_GWsky [ 'ra_se' ] ), float( config_GWsky [ 'dec_se' ] )   # reading variables           
 
 
-     # Undo "U"
+     # Repeat "R"
      config_GWsky [ 'ra_last2' ] = ra_se
      config_GWsky [ 'dec_last2' ] = dec_se
 
@@ -571,7 +571,7 @@ def towards_south_west( input_skymap, fov_width, fov_height, catalog,
      ra_sw, dec_sw = float( config_GWsky [ 'ra_sw' ] ), float( config_GWsky [ 'dec_sw' ] )   # reading variables
                        
 
-     # Undo "U"
+     # Repeat "R"
      config_GWsky [ 'ra_last2' ] = ra_sw
      config_GWsky [ 'dec_last2' ] = dec_sw
 
@@ -653,7 +653,7 @@ def user_FOV( input_skymap, fov_width, fov_height, catalog,
 
      input_ra, input_dec = float( config_GWsky[ init_ra ] ), float( config_GWsky[ init_dec ] )
 
-     # Undo "U"
+     # Repeat "R"
      config_GWsky [ 'ra_last2' ] = input_ra
      config_GWsky [ 'dec_last2' ] = input_dec
 
@@ -886,7 +886,7 @@ def add_FOV( skymap, FOV_base, FOV_height, ra, dec ):
           print ' Press R to run a cycle from a new FOV center; '
           print ' Press F to start from an existing FoV'
           print ' Press L to start from the last FOV'
-          print ' Press U to repeat the last change'
+          print ' Press R to repeat the last action'
           print ' Press Q to exit. '      
           direction = raw_input( ' : ' )
 
@@ -899,7 +899,7 @@ def add_FOV( skymap, FOV_base, FOV_height, ra, dec ):
                     print ' Press R to add a new FOV center; '
                     print ' Press F to start from an existing FoV'
                     print ' Press L to start from the last FOV'
-                    print ' Press U to repeat the last change'
+                    print ' Press R to repeat the last action'
                     print ' Press Q to exit. '      
                     direction = raw_input( ' : ' )
                else:
@@ -957,8 +957,8 @@ def add_FOV( skymap, FOV_base, FOV_height, ra, dec ):
 
                
  
-          # running a new cycle from a  new position
-          elif direction.strip().capitalize() == 'R':
+          # "C" runs a new sequence changing the FoV center
+          elif direction.strip().capitalize() == 'C':
      
                replaced( ) # the ra and dec are iteratively replaced for a new cycle
 
@@ -1043,8 +1043,8 @@ def add_FOV( skymap, FOV_base, FOV_height, ra, dec ):
                                       input_latitude, input_longitude, input_altitude, init_ra = 'ra_se', init_dec = 'dec_se' )
 
 
-          # running a new cycle from an existing FOV
-          elif direction.strip().capitalize() == 'F':
+          # "I" runs a new sequence without drawing the input FoV
+          elif direction.strip().capitalize() == 'I':
                
                replaced( ) # the ra and dec are iteratively replaced for a new cycle
 
@@ -1128,7 +1128,7 @@ def add_FOV( skymap, FOV_base, FOV_height, ra, dec ):
 
 
 
-             # running a new cycle from the last FOV
+             # "L" runs a new sequence starting from the last drawn FoV
           elif direction.strip().capitalize() == 'L':
                
                # ra and dec are iteratively replaced for a new cycle
@@ -1257,10 +1257,8 @@ def add_FOV( skymap, FOV_base, FOV_height, ra, dec ):
 
 
 
-              # running a new cycle from the second-last FOV
-          elif direction.strip().capitalize() == 'U':
-               
-               # ra and dec are iteratively replaced for a new cycle
+              # "R" repeats the last action
+          elif direction.strip().capitalize() == 'R':
 
                import pickle
 
@@ -1387,6 +1385,6 @@ def add_FOV( skymap, FOV_base, FOV_height, ra, dec ):
 
 
                          
-          # closing cycle          
+          # closing script         
           elif direction.strip().capitalize() == 'Q':
                break
