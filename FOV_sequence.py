@@ -986,8 +986,6 @@ def add_FOV( skymap, FOV_base, FOV_height, ra, dec ):
                print ' '
                print ' Press (N/NW/W/SW/S/SE/E/NE) to add FOVs in '
                print ' North/NorthWest/West/SouthWest/South/SouthEast/East/NorthEast; '
-               #print ' Press R to add a new FOV center; '
-               print ' Press Q to exit. '      
                direction = raw_input( ' : ' )
 
                while True:
@@ -996,8 +994,6 @@ def add_FOV( skymap, FOV_base, FOV_height, ra, dec ):
                          print ' '
                          print ' Press (N/NW/W/SW/S/SE/E/NE) to add FOVs in '
                          print ' North/NorthWest/West/SouthWest/South/SouthEast/East/NorthEast; '
-                         print ' Press R to add a new FOV center; '
-                         print ' Press Q to exit. '      
                          direction = raw_input( ' : ' )
                     else:
                          break
@@ -1069,8 +1065,6 @@ def add_FOV( skymap, FOV_base, FOV_height, ra, dec ):
                print ' '
                print ' Press (N/NW/W/SW/S/SE/E/NE) to add FOVs in '
                print ' North/NorthWest/West/SouthWest/South/SouthEast/East/NorthEast; '
-               print ' Press R to add a new FOV center; '
-               print ' Press Q to exit. '      
                direction = raw_input( ' : ' )
 
                while True:
@@ -1079,8 +1073,6 @@ def add_FOV( skymap, FOV_base, FOV_height, ra, dec ):
                          print ' '
                          print ' Press (N/NW/W/SW/S/SE/E/NE) to add FOVs in '
                          print ' North/NorthWest/West/SouthWest/South/SouthEast/East/NorthEast; '
-                         print ' Press R to add a new FOV center; '
-                         print ' Press Q to exit. '      
                          direction = raw_input( ' : ' )
                     else:
                          break
@@ -1191,8 +1183,6 @@ def add_FOV( skymap, FOV_base, FOV_height, ra, dec ):
                print ' '
                print ' Press (N/NW/W/SW/S/SE/E/NE) to add FOVs in '
                print ' North/NorthWest/West/SouthWest/South/SouthEast/East/NorthEast; '
-               print ' Press R to add a new FOV center; '
-               print ' Press Q to exit. '      
                direction = raw_input( ' : ' )
 
                while True:
@@ -1201,8 +1191,6 @@ def add_FOV( skymap, FOV_base, FOV_height, ra, dec ):
                          print ' '
                          print ' Press (N/NW/W/SW/S/SE/E/NE) to add FOVs in '
                          print ' North/NorthWest/West/SouthWest/South/SouthEast/East/NorthEast; '
-                         print ' Press R to add a new FOV center; '
-                         print ' Press Q to exit. '      
                          direction = raw_input( ' : ' )
                     else:
                          break
@@ -1259,6 +1247,8 @@ def add_FOV( skymap, FOV_base, FOV_height, ra, dec ):
 
               # "R" repeats the last action
           elif direction.strip().capitalize() == 'R':
+            
+              # ra and dec are iteratively replaced for a new cycle
 
                import pickle
 
@@ -1318,8 +1308,6 @@ def add_FOV( skymap, FOV_base, FOV_height, ra, dec ):
                print ' '
                print ' Press (N/NW/W/SW/S/SE/E/NE) to add FOVs in '
                print ' North/NorthWest/West/SouthWest/South/SouthEast/East/NorthEast; '
-               print ' Press R to add a new FOV center; '
-               print ' Press Q to exit. '      
                direction = raw_input( ' : ' )
 
                while True:
@@ -1328,8 +1316,6 @@ def add_FOV( skymap, FOV_base, FOV_height, ra, dec ):
                          print ' '
                          print ' Press (N/NW/W/SW/S/SE/E/NE) to add FOVs in '
                          print ' North/NorthWest/West/SouthWest/South/SouthEast/East/NorthEast; '
-                         print ' Press R to add a new FOV center; '
-                         print ' Press Q to exit. '      
                          direction = raw_input( ' : ' )
                     else:
                          break
