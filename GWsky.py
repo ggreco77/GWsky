@@ -134,7 +134,7 @@ def main():
      # printing the area confined in a given percentage of probability.
      print_area_prob( input_skymap, percentage )
      print ''
-     print ' The table that contained those pixels is displayed in Aladin plane  \n < contour_ipix.out >'
+     print ' The table containing the pixels is displayed in Aladin plane  \n < contour_ipix.out >'
 
      # building the table that contained those pixels 
      table_ipix_percentage( input_skymap, percentage )
