@@ -6,7 +6,7 @@ GWsky defines a sequence of Fields of View (FoV) centers from a fixed position (
 Interactively, users can enter any specific objects to display in the Aladin plans for further analysis.
     
     The FoV sequence is generated along the coordinate grid; no roll angle is provided in this  release.
-The FoV centers were evenly space assuming that the shortest angular distance between two points on the celestial sphere is measured along a great circle that passes through both of them:
+The FoV centers are evenly space assuming that the shortest angular distance between two points on the celestial sphere is measured along a great circle that passes through both of them:
 
                             cosθ=sinδ1sinδ2+cosδ1cosδ2cos(α1−α2), 
 where (α1,δ1) and (α2,δ2) are the right ascension and declination of the two points on the sky.
