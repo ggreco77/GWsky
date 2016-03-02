@@ -874,7 +874,7 @@ def add_FOV( skymap, FOV_base, FOV_height, ra, dec ):
                input_latitude, input_longitude, input_altitude, init_ra = 'input_ra', init_dec = 'input_dec' )
     
      
-     # -----------sequence of instrument FOVs from a predetermined sky position---------------------#
+     # -----------sequence of instrument FOVs from a fixed sky position---------------------#
       #----North/NorthWest/West/SouthWest/South/SouthEast/East/NorthEast directions are permitted----#
 
      while True:
