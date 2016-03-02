@@ -1,11 +1,11 @@
 # GWsky: tiling the skymap in Fields of View
                              
-GWsky script is a Python script to generate iteratively pointing positions given a specific instrumental Field of View (FoV) and a specific telescope site.  The script aims to split up into several independent areas the large error boxes of gravitational wave triggers.
+GWsky is a Python script to generate iteratively pointings given an instrumental Field of View (FoV).
+The script aims to split up into several independent areas the large error boxes of gravitational wave triggers.
 
-GWsky defines a sequence of Fields of View (FoV) centers from a fixed position (e.g., from the position corresponding maximum skymap probability) over the sky. Intercardinal and cardinal directions are allowed. The results are displayed in Aladin Sky Atlas (http://aladin.u-strasbg.fr/) using the SAMPIntegratedClient class. The airmass at the FoV center and the integrated probability (%) are provided in real time. Moreover, specifying the ID of a catalog, a query request to the Vizier database is sent. The items are listed in each FoV. 
-Interactively, users can enter any specific objects to display in the Aladin plans for further analysis.
+GWsky defines a sequence of Fields of View (FoV) from a fixed position over the sky (e.g., from the highest probability pixel.). The intercardinal and cardinal directions are allowed. The results are displayed in Aladin Sky Atlas (http://aladin.u-strasbg.fr/) using the SAMPIntegratedClient class. The airmass and the integrated probability are provided in real time. Moreover, specifying the ID of a catalog, a query request to the Vizier database is sent; the relative items are listed in each FoV. 
     
-    The FoV sequence is generated along the coordinate grid; no roll angle is provided in this  release.
+    The FoV sequence is generated along the coordinate grid; no roll angle is provided in this release.
 The FoV centers are evenly spaced assuming that the shortest angular distance between two points on the celestial sphere is measured along a great circle that passes through both of them:
 
                             cosθ=sinδ1sinδ2+cosδ1cosδ2cos(α1−α2), 
