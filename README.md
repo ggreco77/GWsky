@@ -106,19 +106,6 @@ where (α1,δ1) and (α2,δ2) are the right ascension and declination of the two
     import urlparse
     import os.path
     from astropy.io.votable import parse
-    from math import sin, cos, acos, degrees, radians
     import healpy
     import numpy
-    import time                                                                   
-    import sys 
 
-**Script functions**
-
-    import aladinSAMP
-    import print_area_prob 
-    import table_ipix_percentage 
-    import highest_probability_pixel 
-    import instrument_FOV 
-    import airmass 
-    import gw_sequence
-    import progress_bar
