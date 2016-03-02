@@ -1,6 +1,6 @@
 # GWsky: tiling the skymap in Fields of View
                              
-GWsky is a Python script to generate iteratively pointings given an instrumental Field of View (FoV).
+GWsky is a Python script to generate iteratively pointings given a specific Field of View (FoV).
 The script aims to split up into several independent areas the large error boxes of gravitational wave triggers.
 
 GWsky defines a sequence of Fields of View (FoV) from a fixed position over the sky (e.g., from the highest probability pixel.). The intercardinal and cardinal directions are allowed. The results are displayed in Aladin Sky Atlas (http://aladin.u-strasbg.fr/) using the SAMPIntegratedClient class. The airmass and the integrated probability are provided in real time. Moreover, specifying the ID of a catalog, a query request to the Vizier database is sent; the relative items are listed in each FoV. 
