@@ -881,8 +881,8 @@ def add_FOV( skymap, FOV_base, FOV_height, ra, dec ):
 
           print ' '
           print ' '
-          print ' Press (N/NW/W/SW/S/SE/E/NE) to add FoVs in the directions of '
-          print ' North/NorthWest/West/SouthWest/South/SouthEst/Est/NorthEst '
+          print ' Press N/NW/W/SW/S/SE/E/NE to add FoVs in the directions of '
+          print ' North/NorthWest/West/SouthWest/South/SouthEast/East/NorthEast '
           print ' Press C to run a new sequence changing the FoV center'
           print ' Press I to run a new sequence without drawing the input FoV'
           print ' Press L to run a new sequence starting from the last drawn FoV'
@@ -894,7 +894,7 @@ def add_FOV( skymap, FOV_base, FOV_height, ra, dec ):
                if direction == '':
                     print ' '
                     print ' '
-                    print ' Press (N/NW/W/SW/S/SE/E/NE) to add FoVs in the directions of '
+                    print ' Press N/NW/W/SW/S/SE/E/NE to add FoVs in the directions of '
                     print ' North/NorthWest/West/SouthWest/South/SouthEast/East/NorthEast '
                     print ' Press C to run a new sequence changing the FoV center'
                     print ' Press I to run a new sequence without drawing the input FoV'
@@ -984,7 +984,7 @@ def add_FOV( skymap, FOV_base, FOV_height, ra, dec ):
 
                print ' '
                print ' '
-               print ' Press (N/NW/W/SW/S/SE/E/NE) to add FOVs in the directions of '
+               print ' Press N/NW/W/SW/S/SE/E/NE to add FOVs in the directions of '
                print ' North/NorthWest/West/SouthWest/South/SouthEast/East/NorthEast '
                print ' '
                print ' or press any key to continue '
@@ -994,7 +994,7 @@ def add_FOV( skymap, FOV_base, FOV_height, ra, dec ):
                     if direction == '':
                          print ' '
                          print ' '
-                         print ' Press (N/NW/W/SW/S/SE/E/NE) to add FOVs in the directions of'
+                         print ' Press N/NW/W/SW/S/SE/E/NE to add FOVs in the directions of'
                          print ' North/NorthWest/West/SouthWest/South/SouthEast/East/NorthEast '
                          print ' '
                          print ' or press any key to continue '
@@ -1067,7 +1067,7 @@ def add_FOV( skymap, FOV_base, FOV_height, ra, dec ):
 
                print ' '
                print ' '
-               print ' Press (N/NW/W/SW/S/SE/E/NE) to add FOVs in the directions of '
+               print ' Press N/NW/W/SW/S/SE/E/NE to add FOVs in the directions of '
                print ' North/NorthWest/West/SouthWest/South/SouthEast/East/NorthEast '
                print ' '
                print ' or press any key to continue '
@@ -1077,7 +1077,7 @@ def add_FOV( skymap, FOV_base, FOV_height, ra, dec ):
                     if direction == '':
                          print ' '
                          print ' '
-                         print ' Press (N/NW/W/SW/S/SE/E/NE) to add FOVs in the directions of '
+                         print ' Press N/NW/W/SW/S/SE/E/NE to add FOVs in the directions of '
                          print ' North/NorthWest/West/SouthWest/South/SouthEast/East/NorthEast '
                          print ' '
                          print ' or press any key to continue '
@@ -1189,7 +1189,7 @@ def add_FOV( skymap, FOV_base, FOV_height, ra, dec ):
 
                print ' '
                print ' '
-               print ' Press (N/NW/W/SW/S/SE/E/NE) to add FOVs in the directions of '
+               print ' Press N/NW/W/SW/S/SE/E/NE to add FOVs in the directions of '
                print ' North/NorthWest/West/SouthWest/South/SouthEast/East/NorthEast '
                print ' '
                print ' or press any key to continue '
@@ -1199,7 +1199,7 @@ def add_FOV( skymap, FOV_base, FOV_height, ra, dec ):
                     if direction == '':
                          print ' '
                          print ' '
-                         print ' Press (N/NW/W/SW/S/SE/E/NE) to add FOVs in the directions of'
+                         print ' Press N/NW/W/SW/S/SE/E/NE to add FOVs in the directions of'
                          print ' North/NorthWest/West/SouthWest/South/SouthEast/East/NorthEast '
                          print ' '
                          print ' or press any key to continue '
@@ -1318,7 +1318,7 @@ def add_FOV( skymap, FOV_base, FOV_height, ra, dec ):
 
                print ' '
                print ' '
-               print ' Press (N/NW/W/SW/S/SE/E/NE) to add FOVs in the directions of '
+               print ' Press N/NW/W/SW/S/SE/E/NE to add FOVs in the directions of '
                print ' North/NorthWest/West/SouthWest/South/SouthEast/East/NorthEast '
                print ' '
                print ' or press any key to continue '
@@ -1328,7 +1328,7 @@ def add_FOV( skymap, FOV_base, FOV_height, ra, dec ):
                     if direction == '':
                          print ' '
                          print ' '
-                         print ' Press (N/NW/W/SW/S/SE/E/NE) to add FOVs in the directions of '
+                         print ' Press N/NW/W/SW/S/SE/E/NE to add FOVs in the directions of '
                          print ' North/NorthWest/West/SouthWest/South/SouthEast/East/NorthEast '
                          print ' '
                          print ' or press any key to continue '
