@@ -1,6 +1,6 @@
 # GWsky: tiling the skymap in Fields of View
                              
-GWsky is a interactive Python script to generate pointings given a specific Field of View (FoV).
+GWsky is an interactive Python script to generate pointings given a specific Field of View (FoV).
 The script aims to split up into several independent areas the large error boxes of gravitational wave triggers.
 
 It defines a sequence of FoVs from a fixed position over the sky, *e.g*., starting from the highest probability pixel. 
