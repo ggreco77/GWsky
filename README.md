@@ -8,9 +8,9 @@ It defines a sequence of FoVs from a fixed position over the sky, *e.g*., starti
 The FoVs are evenly spaced assuming that the shortest angular distance between two points on the celestial sphere is measured along a great circle that passes through both of them:
 
                             cosθ=sinδ1sinδ2+cosδ1cosδ2cos(α1−α2), 
-where (α1,δ1) and (α2,δ2) are the right ascension and declination of the two points on the sky.
+where (α1,δ1) and (α2,δ2) are the right ascensions and declinations of the two points on the sky.
 
-The intercardinal and cardinal directions are allowed; at user option, the FoVs can be overlaid or separated from the default position.
+The intercardinal and cardinal directions are allowed; the FoVs can be overlaid or separated from the default position.
 
 
 **Running it**
