@@ -36,8 +36,8 @@ def shift_direction_east_west( dec ):
      
      while True:
           try:
-               print " Shift the RA position (+/-) "
-               print " otherwise type '0' "
+               print " shift the RA position (+/-) otherwise type '0' "
+               #print " otherwise type '0' "
                shift = float( input ( " [deg] : " ) )
           except SyntaxError as syntax_error :
                print '', syntax_error
@@ -71,8 +71,8 @@ def shift_direction_nord_sud( dec ):
 
      while True:
           try:
-               print " Shift the DEC position (+/-) "
-               print " otherwise type '0' "
+               print " shift DEC position (+/-)  otherwise type '0' "
+               #print " otherwise type '0' "
                shift = float( input ( " [deg] : " ) )
           except SyntaxError as syntax_error :
                 print '', syntax_error
