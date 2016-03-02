@@ -92,7 +92,7 @@ def main():
           except SAMPHubError as samphub_error:
                print ''
                print '    -------------------------------------------------------------'
-               print '       ***Open Aladin Sky Atlas before running the script***'
+               print '       ***Launch Aladin Sky Atlas for running the script***'
                print '                    http://aladin.u-strasbg.fr/'
                print '    -------------------------------------------------------------'
                print ''
