@@ -2,7 +2,7 @@ def table_ipix_percentage( infile, percentage ):
           
      """
 
-     Save in ascii format the table that contained the  Healpix pixels (ipix) confined in a given probability percentage.
+     Saving in ascii format the Healpix pixel (ipix) confined in a given probability percentage.
 
      """
 
