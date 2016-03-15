@@ -4,14 +4,12 @@ def table_ipix_percentage( infile, percentage ):
 
      Save in ascii format the table that contained the  Healpix pixels (ipix) confined in a given probability percentage.
 
-
      """
-
 
      import healpy as hp
      import numpy as np
 
-     #read skymap
+     #reading skymap
      hpx = hp.read_map( infile, verbose = False )
 
      # number of pixels
@@ -20,7 +18,7 @@ def table_ipix_percentage( infile, percentage ):
      # nside: resolution for the HEALPix map
      nside = hp.npix2nside( npix )
  
-     # sort probability array
+     # sorting probability array
      sort = sorted( hpx, reverse = True )
 
      # cumulative sum 
@@ -37,13 +35,13 @@ def table_ipix_percentage( infile, percentage ):
      # hpx and ipix index 2darray
      hpx_index = np.c_[ hpx, index_hpx ]
 
-     # sorted 2d array hpx and ipix index
+     # sorting 2d array hpx and ipix index
      sort_2array = sorted( hpx_index, key = lambda x: x[0], reverse = True )
 
-     # find ipix confined in  percentage
+     # finding ipix confined in  percentage
      value_contour = sort_2array[ 0:index ]
 
-     # extract ipix index and put in table_ipix_contour
+     # extracting ipix index and put in table_ipix_contour
      j = 1 
      table_ipix_contour = []
 
@@ -57,9 +55,9 @@ def table_ipix_percentage( infile, percentage ):
      # from index to polar coordinates
      theta, phi = hp.pix2ang( nside, table_ipix_contour )
 
-     # convert these to right ascension and declination in degrees
+     # converting these to right ascension and declination in degrees
      ra = np.rad2deg( phi )
      dec = np.rad2deg( 0.5 * np.pi - theta )
 
-     # save table, ra and dec of ipix
+     # saving table, ra and dec of ipix
      np.savetxt( 'contour_ipix.out', np.c_[ra,dec],delimiter=" ", fmt='%1.5f,%1.5f', header='RA[deg],DEC[deg]', comments=' ' )
