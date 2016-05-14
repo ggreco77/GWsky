@@ -1,0 +1,2 @@
+import GWsky
+GWsky.main()
