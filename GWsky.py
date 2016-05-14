@@ -1,6 +1,5 @@
-#! /usr/bin/env python
-# -*- coding: utf-8 -*-  
-
+#!/usr/bin/env python
+# -*- coding: iso-8859-15 -*-  
 #-------------------------GWsky (v2)----------------------------------------
 #                                                                          |
 #  This interactive script is free software: you can redistribute it       |
