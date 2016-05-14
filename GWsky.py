@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: iso-8859-15 -*-  
 #-------------------------GWsky (v2)----------------------------------------
 #                                                                          |
 #  This interactive script is free software: you can redistribute it       |
@@ -23,6 +21,8 @@
 # from terminal: ./GWsky                                                   |
 # if ./GWsky: Permission denied; type: chmod u+x GWsky                     |
 #---------------------------------------------------------------------------
+#!/usr/bin/env python
+# -*- coding: iso-8859-15 -*- 
 
 __author__ = "Giuseppe Greco <giuseppe.greco@uniurb.it>"
  
