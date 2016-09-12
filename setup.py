@@ -7,7 +7,7 @@ exec(open('/version.py').read())
 
 
 setup(name='GWsky',
-      version=__version__,
+      #version=__version__,
       description='GWsky: tiling the skymap in Fields of View',
       author='Giuseppe Greco',
       author_email='giuseppe.greco@uniurb.it',
