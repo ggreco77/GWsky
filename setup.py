@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 from glob import glob
 import re
 
-package_name = 'GWSKY'
+package_name = 'GWsky'
 version_str = re.search(r'^__version__\s+=\s+[\'"](.+)[\'"]',
         open('%s/version.py' % (package_name, )).read(),
         re.M).group(1)
