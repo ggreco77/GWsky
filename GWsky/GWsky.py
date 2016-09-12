@@ -644,10 +644,10 @@ class FoVstatistics(Toplevel):
         canvas._tkcanvas.pack(side=TOP, fill=BOTH, expand=True)
         
 # running
-mainWin = Tk()
-
-sscGUI = ShowSkyCoverageGUI(mainWin)
-mainWin.title('GWsky')
-mainWin.attributes("-topmost", True)
-mainWin.mainloop()
+def run():
+    mainWin = Tk()
+    sscGUI = ShowSkyCoverageGUI(mainWin)
+    mainWin.title('GWsky')
+    mainWin.attributes("-topmost", True)
+    mainWin.mainloop()
 
