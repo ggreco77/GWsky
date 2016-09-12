@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*
+#-*- coding: iso-8859-15 -*-
 
 
 from astropy.vo.samp import SAMPIntegratedClient
