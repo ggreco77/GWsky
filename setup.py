@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-#-*- coding: iso-8859-15 -*-
+# -*- coding: utf-8 -*-
 
 from setuptools import setup, find_packages
 from glob import glob
@@ -18,6 +18,7 @@ setup(name=package_name,
         license='BSD',
         packages=find_packages(),
         long_description=open('README.md').read(),
-        install_requires=['requests',
+        install_requires=['astropy','numpy','matplotlib', 'healpy',
+			   'pandas', 'astroquery', 'dateutil', 'matplotlib.backends'
             ]
 )
