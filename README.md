@@ -17,23 +17,5 @@ The intercardinal and cardinal directions are allowed and the FoVs can be overla
 ![alt tag](GWsky.gif)
 
 **Running it**
-
-    from idle:  
-              >>> import GWsky 
-              >>> GWsky.main() 
-    
-    from terminal: ./GWsky
-    if ./GWsky: Permission denied; type: chmod u+x GWsky
-    
-**SUMMARY OF DEPENDENCIES**
-
-    from astroquery.vizier import Vizier
-    import astropy.coordinates 
-    import astropy.units 
-    from astropy.vo.samp import SAMPIntegratedClient
-    import urlparse
-    import os.path
-    from astropy.io.votable import parse
-    import healpy
-    import numpy
+IN PROGRESS
 
