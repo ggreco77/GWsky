@@ -1,2 +1,2 @@
-from .coverage import ShowSkyCoverage
+from .GWsky import run
 from .version import __version__
