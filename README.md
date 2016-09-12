@@ -18,5 +18,9 @@ A **GUI** guides the user through the sequential steps.
 ![alt tag](GWsky.gif)
 
 **Running it**
-IN PROGRESS
+from GWsky import UserValues
+            .
+            .
+            .
+from GWsky import coverage
 
