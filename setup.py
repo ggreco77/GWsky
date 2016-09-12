@@ -3,7 +3,7 @@
 from distutils.core import setup
 
 
-exec(open('/version.py').read())
+#exec(open('/version.py').read())
 
 
 setup(name='GWsky',
