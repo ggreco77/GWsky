@@ -292,6 +292,11 @@ class UserInput(SkymapCollectionMethods):
     def make_FoV_footprint(self):
         """Making the instrument field of view footprint using a generic template
                   from http://aladin.u-strasbg.fr/footprint_editor/"""
+                  
+        # loading footprint template from Git
+        from astropy.utils.data import download_file
+        url_id = "https://raw.githubusercontent.com/ggreco77/GWsky/master/template_fov_footprint"
+        template_fov_footprint = download_file(url_id, cache=True, timeout=300)
 
         votable = parse("template_fov_footprint.vot") # reading the Instrument 
         table = votable.get_first_table()               #--> Footprint file template
