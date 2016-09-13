@@ -29,10 +29,10 @@ A **GUI** guides the user through the sequential steps.
     
 **Building from source**
 
-$ git clone https://github.com/ggreco77/GWsky
+    $ git clone https://github.com/ggreco77/GWsky
 
-$ cd GWsky
+    $ cd GWsky
 
-$ python setup.py install
+    $ python setup.py install
 
 
