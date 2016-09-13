@@ -19,6 +19,6 @@ setup(name=package_name,
         packages=find_packages(),
         long_description=open('README.md').read(),
         install_requires=['astropy','numpy','matplotlib', 'healpy',
-			   'pandas', 'astroquery', 'dateutil', 'matplotlib.backends'
+			   'pandas', 'astroquery', 'dateutil'
             ]
 )
