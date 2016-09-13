@@ -20,11 +20,9 @@ A **GUI** guides the user through the sequential steps.
 **Running it**
 
     from GWsky import UserValues
-
             .
             .
             .
-            
     from GWsky import coverage
     
 **Building from source**
