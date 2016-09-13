@@ -26,4 +26,13 @@ A **GUI** guides the user through the sequential steps.
             .
             
     from GWsky import coverage
+    
+**Building from source**
+
+$ git clone https://github.com/ggreco77/GWsky
+
+$ cd GWsky
+
+$ python setup.py install
+
 
