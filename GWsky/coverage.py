@@ -210,8 +210,7 @@ class ShowSkyCoverage(Airmass):
 
 
     def query_fov(self, ra, dec, base, height, catalog):
-        """Vizier.query_region in selected FoV. The hist of the apparent blue magnitude
-           and the sky coordinates are provided if GWGC catalog is selected."""
+        """Vizier.query_region in selected FoV."""
 
         Vizier.ROW_LIMIT = None
         base_str, height_str = str(base) + 'd', str(height) + 'd'
