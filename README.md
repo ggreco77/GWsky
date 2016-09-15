@@ -13,7 +13,8 @@ The FoVs are evenly spaced assuming that the shortest angular distance between t
 where (α1,δ1) and (α2,δ2) are the right ascensions and declinations of the two points on the sky.
 
 Cardinal directions are allowed and the FoVs can be overlaid or separated from the default position following the user's selection. 
-A **GUI** guides the user through the sequential steps.
+A **GUI** guides the user through the sequential steps
+                            https://vimeo.com/182427599
 
 ![alt tag](GWsky.gif)
 
