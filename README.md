@@ -32,6 +32,6 @@ The development version can be obtained and installed from github:
 
     $ git clone https://github.com/ggreco77/GWsky
     $ cd GWsky
-    $ python setup.py install
+    $ python (sudo) setup.py install
 
 
