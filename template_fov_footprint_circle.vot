@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Produced with astropy.io.votable version 1.2.1
+     http://www.astropy.org/ -->
+<VOTABLE version="1.1" xmlns="http://www.ivoa.net/xml/VOTable/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.ivoa.net/xml/VOTable/v1.1">
+ <RESOURCE ID="pointing" type="results" utype="dal:footprint.geom">
+  <PARAM ID="TelescopeName" arraysize="*" datatype="char" name="TelescopeName" value="MyTelescope"/>
+  <PARAM ID="InstrumentName" arraysize="*" datatype="char" name="InstrumentName" value="MyInstrument"/>
+  <PARAM ID="InstrumentDescription" arraysize="*" datatype="char" name="InstrumentDescription" value="My footprint description"/>
+  <PARAM ID="Origin" arraysize="*" datatype="char" name="Origin" value="My footprint origin"/>
+  <PARAM ID="reference-frame" arraysize="*" datatype="char" name="reference-frame" utype="stc:AstroCoordSystem.CoordFrame.CARTESIAN" value="*"/>
+  <PARAM ID="projection" arraysize="*" datatype="char" name="projection" utype="stc:AstroCoordSystem.CoordFrame.Cart2DRefFrame.projection" value="TAN"/>
+  <RESOURCE ID="shape_1" type="results">
+   <TABLE utype="dal:footprint.geom.segment">
+    <PARAM ID="Shape" arraysize="*" datatype="char" name="Shape" utype="dal:footprint.geom.segment.shape" value="Circle"/>
+    <PARAM ID="cxPtPosition" datatype="double" name="cxPtPosition" unit="arcs" utype="stc:AstroCoordArea.Circle.Center.C1" value="0"/>
+    <PARAM ID="cyPtPosition" datatype="double" name="cyPtPosition" unit="arcs" utype="stc:AstroCoordArea.Circle.Center.C2" value="0"/>
+    <PARAM ID="radius" datatype="double" name="radius" unit="arcs" utype="stc:AstroCoordArea.Circle.radius" value="72000"/>
+   </TABLE>
+  </RESOURCE>
+ </RESOURCE>
+</VOTABLE>
