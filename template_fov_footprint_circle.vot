@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <VOTABLE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" xmlns="http://www.ivoa.net/xml/VOTable/v1.1" xsi:schemaLocation="http://www.ivoa.net/xml/VOTable/v1.1 http://www.ivoa.net/xml/VOTable/v1.1">
-<RESOURCE ID="MyFootprint" utype="dal:footprint.geom">
+<RESOURCE ID="pointing" utype="dal:footprint.geom">
     <PARAM datatype="char" arraysize="*" name="TelescopeName" ID="TelescopeName" value="MyTelescope" />
     <PARAM datatype="char" arraysize="*" name="InstrumentName" ID="InstrumentName" value="MyInstrument" />
     <PARAM datatype="char" arraysize="*" name="InstrumentDescription" ID="InstrumentDescription" value="My footprint description" />
