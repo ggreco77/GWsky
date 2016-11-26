@@ -799,7 +799,7 @@ class FoVstatistics(Toplevel):
                 query_catalog.set_xlabel('GLADE catalog: apparent B magnitude')  # read note above
                 query_catalog.set_ylabel('Count')                               # read note above
             except UnboundLocalError as unbound_local_error:
-                print ('No Galaxies in the selcted FoV')              
+                print ('No Galaxies in the selected FoV')              
             finally:
                 pass
             
