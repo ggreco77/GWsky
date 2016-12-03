@@ -71,7 +71,7 @@ class UserInput(object):
 
     def display_welcome(self):
         print('                 *************************           ')
-        print('                 Welcome to GWsky -v3.5.0            ')
+        print('                 Welcome to GWsky -v3.5.1            ')
         print('                 *************************           ')
         print('                                                     ')
         print('')
