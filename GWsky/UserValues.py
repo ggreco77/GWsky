@@ -423,20 +423,19 @@ class UserInput(object):
 
         
 # running module
-if __name__ == '__main__':
-    user_input = UserInput()
+user_input = UserInput()
 
-    user_input.display_welcome()
-    user_input.healpix_skymap()
-    user_input.update_GWsky_config()
-    user_input.display_healpix_skymap()
-    user_input.select_option()
-    user_input.fov_shape()
-    user_input.telescope_site()
-    user_input.starting_time()
-    user_input.GWsky_basic()
-    user_input.maximum_pixel()
-    user_input.sky_position()
-    user_input.site()
-    aladin.draw_newtool('FoVcenters') # new plane: FoV sky coords
-    user_input.display_note()
+user_input.display_welcome()
+user_input.healpix_skymap()
+user_input.update_GWsky_config()
+user_input.display_healpix_skymap()
+user_input.select_option()
+user_input.fov_shape()
+user_input.telescope_site()
+user_input.starting_time()
+user_input.GWsky_basic()
+user_input.maximum_pixel()
+user_input.sky_position()
+user_input.site()
+aladin.draw_newtool('FoVcenters') # new plane: FoV sky coords
+user_input.display_note()
