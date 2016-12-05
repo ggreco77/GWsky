@@ -853,14 +853,13 @@ class FoVstatistics(Toplevel):
         draw_area = draw_area()
         
 # running
-if __name__ == '__main__':
-    mainWin = Tk()
+mainWin = Tk()
 
-    sscGUI = ShowSkyCoverageGUI(mainWin)
-    mainWin.title('GWsky')
-    mainWin.attributes("-topmost", True)
+sscGUI = ShowSkyCoverageGUI(mainWin)
+mainWin.title('GWsky')
+mainWin.attributes("-topmost", True)
 
-    mainWin.wait_visibility(mainWin)
-    mainWin.wm_attributes('-alpha', 0.8) #semi-trasparent windows
+mainWin.wait_visibility(mainWin)
+mainWin.wm_attributes('-alpha', 0.8) #semi-trasparent windows
 
-    mainWin.mainloop()
+mainWin.mainloop()
