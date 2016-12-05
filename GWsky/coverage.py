@@ -259,10 +259,10 @@ class ShowSkyCoverage(Airmass):
                                       (1+x[3]**2+y[3]**2)**0.5)) )  
 
         # test: Aladin FoV vs vertices function
-        aladin.draw_circle(v1_ra, v1_dec,size = '5arcmin')
-        aladin.draw_circle(v2_ra, v2_dec,size = '5arcmin')
-        aladin.draw_circle(v3_ra, v3_dec,size = '5arcmin')
-        aladin.draw_circle(v4_ra, v4_dec,size = '5arcmin')
+        #aladin.draw_circle(v1_ra, v1_dec,size = '5arcmin')
+        #aladin.draw_circle(v2_ra, v2_dec,size = '5arcmin')
+        #aladin.draw_circle(v3_ra, v3_dec,size = '5arcmin')
+        #aladin.draw_circle(v4_ra, v4_dec,size = '5arcmin')
                 
         return v1_ra, v2_ra, v4_ra, v3_ra, v1_dec, v2_dec, v4_dec, v3_dec
 
