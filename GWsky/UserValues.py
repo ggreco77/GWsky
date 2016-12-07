@@ -83,10 +83,10 @@ class UserInput(object):
         print ('            and check the SAMP connection:')
         print ( ' Aladin bar --> Interop --> Connect with SAMP. ')
         print('')             
-        print('  The *UserValues* module creates 3 configuration file:)
-        print('  GWsky_config, GWsky_coords and user_fov.vot.')
-        print (' The configuration file is read by the module *coverage*. ')
-        print('')
+        #print('  The *UserValues* module creates 3 configuration file:)
+        #print('  GWsky_config, GWsky_coords and user_fov.vot.')
+        #print (' The configuration file are read by the module *coverage*. ')
+        #print('')
 
     def display_SampError(self):
         print('')
