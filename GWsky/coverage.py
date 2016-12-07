@@ -160,7 +160,7 @@ class ShowSkyCoverage(Airmass):
         fov_2 = SkyCoord(ra2, dec2, frame='icrs',unit='deg')
         sep = fov_1.separation(fov_2)
 
-        print ('The Distance between 2 consecutive FoV centers is', sep)
+        print ('The distance between 2 consecutive FoV centers is', sep.round(6))
 
     def are_all_same(self, items):
         """Check if all elements of a list are the same."""
