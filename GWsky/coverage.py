@@ -726,7 +726,7 @@ class FoVstatistics(Toplevel):
                       self.clicked)
         self.B00.pack(side=TOP,fill=BOTH)
 
-        self.B01 = Button(self,text="Delate the last drawn FoV") # Delate Btn
+        self.B01 = Button(self,text="Delete the last drawn FoV") # Delate Btn
         self.B01.bind("<ButtonRelease-1>",
                       self.clicked)
         self.B01.pack(side=TOP,fill=BOTH)
