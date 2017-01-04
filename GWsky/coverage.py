@@ -726,14 +726,14 @@ class FoVstatistics(Toplevel):
                       self.clicked)
         self.B00.pack(side=TOP,fill=BOTH)
 
-        self.B01 = Button(self,text="Delete the last drawn FoV") # Delate Btn
+        self.B01 = Button(self,text="Delete the last drawn FoV") # Delete Btn
         self.B01.bind("<ButtonRelease-1>",
                       self.clicked)
         self.B01.pack(side=TOP,fill=BOTH)
      
     # Actions
     def clicked(self, event):
-        """Retain or Delete Button to retain or delate the FoV."""
+        """Retain or Delete Button to retain or delete the FoV."""
         
         if event.widget == self.B00:
             """Retain and Close the last FoV."""
