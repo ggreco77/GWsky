@@ -249,10 +249,10 @@ class ShowSkyCoverage(Airmass, UserValues):
             vert_dec.append(v_dec)
 
         # test: field-of-view footprint vs vertices function
-        aladin.draw_circle(vert_ra[0], vert_dec[0], size = '2arcmin')
-        aladin.draw_circle(vert_ra[1], vert_dec[1], size = '2arcmin')
-        aladin.draw_circle(vert_ra[2], vert_dec[2], size = '2arcmin')
-        aladin.draw_circle(vert_ra[3], vert_dec[3], size = '2arcmin')
+        #aladin.draw_circle(vert_ra[0], vert_dec[0], size = '2arcmin')
+        #aladin.draw_circle(vert_ra[1], vert_dec[1], size = '2arcmin')
+        #aladin.draw_circle(vert_ra[2], vert_dec[2], size = '2arcmin')
+        #aladin.draw_circle(vert_ra[3], vert_dec[3], size = '2arcmin')
                 
         return vert_ra[0], vert_ra[1], vert_ra[3], vert_ra[2], vert_dec[0], vert_dec[1], vert_dec[3], vert_dec[2]
 
