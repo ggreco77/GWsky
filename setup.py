@@ -18,7 +18,4 @@ setup(name=package_name,
         license='BSD',
         packages=find_packages(),
         long_description=open('README.md').read(),
-        install_requires=['astropy>=1.2.1', 'numpy', 'matplotlib', 'healpy', 'scipy',
-			   'pandas', 'astroquery'
-            ]
-)
+        install_requires=['astropy>=1.2.1', 'numpy', 'matplotlib', 'healpy', 'scipy', 'astroquery'])
