@@ -298,8 +298,9 @@ class ShowSkyCoverage(Airmass, UserValues):
             theta = 0.5 * np.pi - np.deg2rad(dec)
             phi = np.deg2rad(ra)
             ipix = hp.ang2pix(self.nside, theta, phi)
-
-            r = np.linspace(0, 180)
+            
+            line_end = header['DISTMEAN'] + (header['DISTSTD']*3)
+            r = np.linspace(0, line_end)
             dp_dr = r**2*distnorm[ipix]*norm(distmu[ipix], distsigma[ipix]).pdf(r)
             
             return r, dp_dr
