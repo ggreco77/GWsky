@@ -741,7 +741,7 @@ class StartingFoV(Toplevel, UserValues):
     def __split_entries(self):
         """Splitting the entries in ra and dec; # odd: ra and # even: dec."""
         
-        current_fov_coords = self.entry_1.get().split()
+        current_fov_coords = self.entry_1.get().replace(';',' ').replace('-',' ').replace(',',' ').split()
         fov_center_ra = current_fov_coords[0::2]
         fov_center_dec = current_fov_coords[1::2]
 
