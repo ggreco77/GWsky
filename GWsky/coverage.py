@@ -106,7 +106,7 @@ class Airmass(UserValues):
                                               location=observatory))                                                                             
         airmass_value = altaz.secz                  
 
-        if airmass_value <= AIRMASS_MIN or airmass_value >= AIRMASS_MAX:
+        if airmass_value < AIRMASS_MIN or airmass_value >= AIRMASS_MAX:
              airmass_value =  "nan" 
         else:     
              airmass_value = round(airmass_value, 2) 
