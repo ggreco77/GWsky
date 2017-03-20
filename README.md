@@ -30,5 +30,6 @@ The development version can be obtained and installed from github:
     $ git clone https://github.com/ggreco77/GWsky
     $ cd GWsky
     $ (sudo) python setup.py install
-
+    
+![alt tag](https://github.com/ggreco77/Multi-Order-Coverage-of-probability-skymaps/blob/master/FIRB.jpg)
 
