@@ -32,4 +32,6 @@ The development version can be obtained and installed from github:
     $ (sudo) python setup.py install
     
 ![alt tag](https://github.com/ggreco77/Multi-Order-Coverage-of-probability-skymaps/blob/master/FIRB.jpg)
+*M. Branchesi, G. Greco and G. Stratta are supported by the Italian Ministry of Education, University 
+and Research via grant FIRB 2012- RBFR12PM1F.*
 
