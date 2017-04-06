@@ -23,7 +23,10 @@ A **GUI** guides the user through the sequential steps
 
 ![alt tag](GWsky.gif)
 
+
 **Requirements**
+               astropy>=1.2.1, numpy, matplotlib, healpy, scipy, astroquery, mocpy
+               
 
 **Running it**
 
