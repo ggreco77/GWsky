@@ -23,6 +23,8 @@ A **GUI** guides the user through the sequential steps
 
 ![alt tag](GWsky.gif)
 
+**Requirements**
+
 **Running it**
 
     >>> from GWsky import UserValues
