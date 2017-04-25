@@ -26,7 +26,7 @@ A **GUI** guides the user through the sequential steps
 
 **Requirements**
 
-    MOCPy runs under Python 2.7.x
+    GWsky runs under Python 2.7.x
                                
     astropy>=1.2.1, numpy, matplotlib, healpy, scipy, astroquery, mocpy
                
