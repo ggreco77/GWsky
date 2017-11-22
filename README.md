@@ -6,9 +6,9 @@ The script aims to split the large GW sky localization into several independent 
 It defines a sequence of FoVs from a fixed position over the sky, *e.g*., starting from the highest probability pixel. 
 The results are displayed in [Aladin Sky Atlas](http://aladin.u-strasbg.fr/) using the SAMPIntegratedClient class.
 
-**The beta Aladin version is strongly recommended http://aladin.u-strasbg.fr/java/download/AladinBeta.jar** Run it typing
+**The Aladin V10 Avant Premiere is strongly recommended http://aladin.u-strasbg.fr/java/AladinV10.jar** Run it typing
 
-                             java -Xmx1024m -jar AladinBeta.jar
+                             java -Xmx1024m -jar AladinV10.jar
 
 The airmass and the integrated probability are provided in real time. Moreover, specifying the ID of a catalog, a query to the Vizier database is sent and the relative items are listed in each FoV. 
     
