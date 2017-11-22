@@ -4,7 +4,7 @@ GWsky is an interactive Python script to generate a sequence of pointings given 
 The script aims to split the large GW sky localization into several independent areas.
 
 It defines a sequence of FoVs from a fixed position over the sky, *e.g*., starting from the highest probability pixel. 
-The results are displayed in Aladin Sky Atlas (http://aladin.u-strasbg.fr/) using the SAMPIntegratedClient class.
+The results are displayed in [Aladin Sky Atlas](http://aladin.u-strasbg.fr/) using the SAMPIntegratedClient class.
 
 **The beta Aladin version is strongly recommended http://aladin.u-strasbg.fr/java/download/AladinBeta.jar** Run it typing
 
