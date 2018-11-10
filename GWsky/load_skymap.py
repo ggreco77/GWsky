@@ -20,10 +20,10 @@ import healpy as hp
 import numpy as np
 
 
-from aladinSAMP import AladinScriptCommands 
+from .aladinSAMP import AladinScriptCommands 
 aladin = AladinScriptCommands()
 
-from config_values import UserValues
+from .config_values import UserValues
 
 # global variable: level of trasparency window
 user = UserValues() 
