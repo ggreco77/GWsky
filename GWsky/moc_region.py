@@ -8,6 +8,11 @@ from math import log
 
 from .lvc_skymap import LVCskymap
 
+import time
+        
+from .aladinSAMP import AladinScriptCommands 
+aladin = AladinScriptCommands()
+
 class MOC_confidence_region(object):
     """Multi-Order coverage map (MOC) of sky areas enclosed within a contour plot
     at a given confidence level."""
@@ -176,10 +181,7 @@ class MOC_confidence_region(object):
     def contour_default(self, _from, _to, _step, skymap=""):
         """Creating & Showing MOC plots (from 10% to 90% in step of 10%) in a folder."""
 
-        import time
-        
-        from aladinSAMP import AladinScriptCommands 
-        aladin = AladinScriptCommands()
+
 
         colors=["#ff0000","#ffaa00 ","#aaff00","#00ff00","#00ffa9",
                 "#00a9ff","#0000ff","#aa00ff","#ff00aa"] # skymap viewer color
