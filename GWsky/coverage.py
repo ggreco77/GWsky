@@ -43,7 +43,7 @@ from .load_skymap import LoadSkymap
 
 aladin.setconf_icrsd() # setting ICRSd
 
-from config_values import UserValues
+from .config_values import UserValues
 
 from .lvc_skymap import LVCskymap
 #lvc = LVCskymap()
