@@ -10,7 +10,7 @@ The results are displayed in [Aladin Sky Atlas](http://aladin.u-strasbg.fr/) usi
 
 **The Aladin v10.076  is recommended http://aladin.u-strasbg.fr/java/Aladin.jar** Run it typing
 
-                             java -Xmx1024m -jar Aladin.jar
+                             java -Xmx2g -jar Aladin.jar
 
 The airmass and the integrated probability are provided in real time. Moreover, specifying the ID of a catalog, a query to the Vizier database is sent and the relative items are listed in each FoV. 
     
