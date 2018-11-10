@@ -4,9 +4,9 @@ import numpy as np
 from math import cos, sin, acos, asin, atan, degrees, radians
 from scipy.stats import norm
 
-from config_values import UserValues
+from .config_values import UserValues
 
-from aladinSAMP import AladinViaSAMP, AladinScriptCommands 
+from .aladinSAMP import AladinViaSAMP, AladinScriptCommands 
 samp = AladinViaSAMP() # potresti toglierlo, ereditato da aladin cone jupyter
 aladin = AladinScriptCommands()
 
