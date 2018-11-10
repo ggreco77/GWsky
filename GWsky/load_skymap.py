@@ -7,14 +7,9 @@ try:
 except:
    import pickle
    
-# Python 3 support
-try:
-    from Tkinter import *
-    import tkMessageBox
-    import tkFont
-except ImportError:
-    from tkinter import *
-    from tkinter import font, messagebox
+
+from tkinter import *
+from tkinter import font, messagebox
 
 import healpy as hp
 import numpy as np
