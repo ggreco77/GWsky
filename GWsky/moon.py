@@ -8,10 +8,10 @@ from astropy.time import Time
 
 import numpy as np
 
-from config_values import UserValues
-from aladinSAMP import AladinViaSAMP, AladinScriptCommands
+from .config_values import UserValues
+from .aladinSAMP import AladinViaSAMP, AladinScriptCommands
 
-from utils import Utils
+from .utils import Utils
 
 class Moon(object):
 
