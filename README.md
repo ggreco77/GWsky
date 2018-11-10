@@ -1,6 +1,8 @@
 # GWsky: tiling the skymap in Fields of View
 
-## NEW *GWsky v5.0 with the new features show [here](https://docs.google.com/presentation/d/1xBCXg4apU6FMxnbzlbYdynrXuQENYqb00wk2p2UShGs/edit?usp=sharing)*
+## NEW *GWsky v5.0 only for python 3.5.x
+
+GWsky presentation [here](https://docs.google.com/presentation/d/1xBCXg4apU6FMxnbzlbYdynrXuQENYqb00wk2p2UShGs/edit?usp=sharing)*
                              
 GWsky is an interactive Python script to generate a sequence of pointings given a specific Field of View (FoV).
 The script aims to split the large GW sky localization into several independent areas.
@@ -44,7 +46,7 @@ The development version can be obtained and installed from github:
 
     $ git clone https://github.com/ggreco77/GWsky
     $ cd GWsky
-    $ (sudo) python setup.py install
+    $ (sudo) python3 setup.py install
     
 ![alt tag](https://github.com/ggreco77/Multi-Order-Coverage-of-probability-skymaps/blob/master/FIRB.jpg)
 *M. Branchesi, G. Greco and G. Stratta are supported by the Italian Ministry of Education, University 
