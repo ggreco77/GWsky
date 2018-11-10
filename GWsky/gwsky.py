@@ -20,7 +20,7 @@ from astropy.utils.data import download_file
 # GWsky modules
 from .aladinSAMP import AladinViaSAMP, AladinScriptCommands 
 aladin = AladinScriptCommands()
-from utils import Utils
+from .utils import Utils
 #from  coverage import ra0ra1
 
 from tkinter import *
