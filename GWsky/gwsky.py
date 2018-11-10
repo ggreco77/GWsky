@@ -601,7 +601,7 @@ class UserValuesGUI:
         
         messagebox.showinfo('User Values has been initialized', message)
         
-        import .coverage
+        from .coverage import *
 
         Utils.create_folders(folders=["Queries", "Coords", "FoV"])
         Utils.load_user_fov("GWsky_fov.vot")
