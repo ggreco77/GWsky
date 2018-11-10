@@ -18,7 +18,7 @@ from astropy.io.votable.tree import VOTableFile, Resource, Field, Param
 from astropy.utils.data import download_file
 
 # GWsky modules
-from aladinSAMP import AladinViaSAMP, AladinScriptCommands 
+from .aladinSAMP import AladinViaSAMP, AladinScriptCommands 
 aladin = AladinScriptCommands()
 from utils import Utils
 #from  coverage import ra0ra1
