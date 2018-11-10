@@ -23,7 +23,7 @@ aladin = AladinScriptCommands()
 from .utils import Utils
 #from  coverage import ra0ra1
 
-import .coverage
+
 
 from tkinter import *
 from tkinter import filedialog, font, messagebox
@@ -603,7 +603,7 @@ class UserValuesGUI:
         
         messagebox.showinfo('User Values has been initialized', message)
         
-        
+        from . import coverage
 
         Utils.create_folders(folders=["Queries", "Coords", "FoV"])
         Utils.load_user_fov("GWsky_fov.vot")
