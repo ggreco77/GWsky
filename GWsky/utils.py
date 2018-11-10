@@ -3,7 +3,7 @@
 from __future__ import print_function
 import sys
 
-from aladinSAMP import AladinViaSAMP, AladinScriptCommands
+from .aladinSAMP import AladinViaSAMP, AladinScriptCommands
 samp = AladinViaSAMP()
 aladin = AladinScriptCommands()
 
