@@ -2,28 +2,24 @@
 
 #from __future__ import print_function
 
-# py2 and py3 compatibility
-try:
-    from Tkinter import *
-except ImportError:
-    from tkinter import *
+from tkinter import *
     
 import numpy as np
 import matplotlib.pyplot as plt
 import healpy as hp
 
-from moc_region import MOC_confidence_region
+from .moc_region import MOC_confidence_region
 moc = MOC_confidence_region()
 
-from msg_pyversion import MSG
+from .msg_pyversion import MSG
 
-from lvc_skymap import LVCskymap
-from lvc_skymap import healpixIpix
+from .lvc_skymap import LVCskymap
+from .lvc_skymap import healpixIpix
 
-from aladinSAMP import AladinScriptCommands 
+from .aladinSAMP import AladinScriptCommands 
 aladin = AladinScriptCommands()
 
-from config_values import UserValues
+from .config_values import UserValues
 
 # global variable: transparency level of windows
 user = UserValues() 
