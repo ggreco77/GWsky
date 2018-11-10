@@ -6,7 +6,7 @@ from astropy.time import Time
 
 import dateutil
 
-from config_values import UserValues
+from .config_values import UserValues
 
 class Airmass(object):
     """Airmass calculation from 1 to 5.8 by default."""
