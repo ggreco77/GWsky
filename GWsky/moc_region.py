@@ -6,7 +6,7 @@ from mocpy import MOC
 
 from math import log
 
-from lvc_skymap import LVCskymap
+from .lvc_skymap import LVCskymap
 
 class MOC_confidence_region(object):
     """Multi-Order coverage map (MOC) of sky areas enclosed within a contour plot
