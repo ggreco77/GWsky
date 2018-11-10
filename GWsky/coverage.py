@@ -35,34 +35,34 @@ import numpy as np
 
 from mocpy import MOC
 
-from aladinSAMP import AladinScriptCommands 
+from .aladinSAMP import AladinScriptCommands 
 aladin = AladinScriptCommands()
 
-from localize import LocalizeSources
-from load_skymap import LoadSkymap
+from .localize import LocalizeSources
+from .load_skymap import LoadSkymap
 
 aladin.setconf_icrsd() # setting ICRSd
 
 from config_values import UserValues
 
-from lvc_skymap import LVCskymap
+from .lvc_skymap import LVCskymap
 #lvc = LVCskymap()
 
-from query import Query
+from .query import Query
 query = Query()
 
-from airmass import Airmass
+from .airmass import Airmass
 #airmass = Airmass()
 
-from moon import Moon
+from .moon import Moon
 moon = Moon()
 
-from moc_region import MOC_confidence_region
+from .moc_region import MOC_confidence_region
 
 
 
 # creating folders in Aladin planes
-from utils import Utils
+from .utils import Utils
 Utils.create_folders(folders=["Queries", "Coords", "FoV"])
 Utils.load_user_fov("GWsky_fov.vot")
 
