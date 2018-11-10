@@ -3,14 +3,8 @@
 import os
 import sys
 
-# py2 and py3 compatibility
-try:
-    from Tkinter import *
-    import tkMessageBox
-    import tkFont
-except ImportError:
-    from tkinter import *
-    from tkinter import font, messagebox
+from tkinter import *
+from tkinter import font, messagebox
 
 class MSG(object):
     """Message according with the python version: tkMessageBox/messagebox in localize module."""
