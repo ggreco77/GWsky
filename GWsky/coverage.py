@@ -962,13 +962,13 @@ class ObsSkymap(Toplevel):
             snap_1 = contour_ipix[(contour_ipix['airmass'] >= i) & (contour_ipix['airmass'] < j) ]
             moc_order = self.moc.moc_order(nside)
 
+            #snap_1['RA[deg]'].unit = 'deg'
+            #snap_1['DEC[deg]'].unit = 'deg'
 
-            snap_1['RA[deg]'].unit = 'deg'
-            snap_1['DEC[deg]'].unit = 'deg'
-
-            moc = MOC.from_lonlat( snap_1['RA[deg]'], snap_1['DEC[deg]'],
+            moc = MOC.from_lonlat( snap_1['RA[deg]'].T*u.deg, snap_1['DEC[deg]'].T*u.deg,
                                   moc_order )                # moc creation
-            moc.write( 'snap_airmass_'+'initial', format = 'fits', write_to_file = True)     # fits file
+            
+            moc.write( 'snap_airmass_'+'initial', format = 'fits',)     # fits file
 
             if len(snap_1)!=0:
                 aladin.send_file('snap_airmass_'+'initial')
@@ -998,13 +998,12 @@ class ObsSkymap(Toplevel):
             snap = contour_ipix[(contour_ipix['airmass'] >= i) & (contour_ipix['airmass'] < j) ]
             moc_order = self.moc.moc_order(nside)
 
+            #snap['RA[deg]'].unit = 'deg'
+            #snap['DEC[deg]'].unit = 'deg'
 
-            snap['RA[deg]'].unit = 'deg'
-            snap['DEC[deg]'].unit = 'deg'
-
-            moc = MOC.from_lonlat( snap['RA[deg]'], snap['DEC[deg]'],
+            moc = MOC.from_lonlat( snap['RA[deg]'].T*u.deg, snap['DEC[deg]'].T*u.deg,
                                   moc_order )                # moc creation
-            moc.write( 'snap', format = 'fits', write_to_file = True )     # fits file
+            moc.write( 'snap', format = 'fits', )     # fits file
 
             if len(snap)!=0:
                 aladin.send_file('snap')
@@ -1123,20 +1122,17 @@ class ObsInMOC(Toplevel):
         mask2 = (obs1['airmass']) <= float(self.entry_airmass.get())  # airmass user values
         obs = obs1[mask2]
 
-        obs['RA[deg]'].unit = 'deg'
-        obs['DEC[deg]'].unit = 'deg'        
-
-        # TEST
-        #print obs, "sono qui"
+        #obs['RA[deg]'].unit = 'deg'
+        #obs['DEC[deg]'].unit = 'deg'        
         
         nside = self.user.get_nside()
 
         #if len(obs)!=0:
         moc_order = self.moc.moc_order(nside)
-        moc = MOC.from_lonlat( obs['RA[deg]'], obs['DEC[deg]'],
-                               moc_order )                # moc creation
+        moc = MOC.from_lonlat( obs['RA[deg]'].T*u.deg, obs['DEC[deg]'].T*u.deg,
+                              moc_order )                # moc creation
             
-        moc.write( 'obs_airmass_', format = 'fits',write_to_file = True )     # fits file
+        moc.write( 'obs_airmass_', format = 'fits',)     # fits file
 
         if len(obs)!=0:
            aladin.send_file('obs_airmass_')
