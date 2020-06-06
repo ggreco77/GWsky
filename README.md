@@ -2,7 +2,7 @@
 
 ## NEW **GWsky v5.0** only for python 3
 
-**[Short Turorial](http://htmlpreview.github.io/?https://github.com/ggreco77/Electromagnetic-follow-up-of-gravitational-wave-events/blob/master//gwsky_example.html) to localize events and manage a FoV sequence with the GWsky_pointing.txt**
+**[Short Turorial](https://htmlpreview.github.io/?https://github.com/ggreco77/NS-Merger-Training-Workshop/blob/master/Bertinoro_day2.html) to localize events and manage a FoV sequence with the GWsky_pointing.txt**
 
 
 GWsky presentation [here](https://docs.google.com/presentation/d/1xBCXg4apU6FMxnbzlbYdynrXuQENYqb00wk2p2UShGs/edit?usp=sharing)
